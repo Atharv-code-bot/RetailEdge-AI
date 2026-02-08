@@ -1,0 +1,22 @@
+# app/core/config.py
+
+DECLINING_SALES_PCT = -20        # % drop
+STAGNANT_SALES_THRESHOLD = 0.1  # avg daily sales
+LOW_STOCK_DAYS = 5
+OVERSTOCK_DAYS = 60
+SEASONAL_DROP_PCT = -30
+
+
+URGENCY_WEIGHTS = {
+    "DECLINING_SALES": 30,
+    "STAGNANT_SALES": 15,
+    "LOW_STOCK": 25,
+    "OVERSTOCK": 10,
+    "SEASONAL_MISMATCH": 20,
+}
+
+SEVERITY_MULTIPLIER = {
+    "LOW": 0.5,
+    "MEDIUM": 1.0,
+    "HIGH": 1.5,
+}
