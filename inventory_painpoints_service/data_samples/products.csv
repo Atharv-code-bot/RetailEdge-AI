@@ -1,36 +1,110 @@
-Product_ID,Product_Name,Product_Category,Product_Cost,Product_Price
-1,Action Figure,Toys,$9.99 ,$15.99 
-2,Animal Figures,Toys,$9.99 ,$12.99 
-3,Barrel O' Slime,Art & Crafts,$1.99 ,$3.99 
-4,Chutes & Ladders,Games,$9.99 ,$12.99 
-5,Classic Dominoes,Games,$7.99 ,$9.99 
-6,Colorbuds,Electronics,$6.99 ,$14.99 
-7,Dart Gun,Sports & Outdoors,$11.99 ,$15.99 
-8,Deck Of Cards,Games,$3.99 ,$6.99 
-9,Dino Egg,Toys,$9.99 ,$10.99 
-10,Dinosaur Figures,Toys,$10.99 ,$14.99 
-11,Etch A Sketch,Art & Crafts,$10.99 ,$20.99 
-12,Foam Disk Launcher,Sports & Outdoors,$8.99 ,$11.99 
-13,Gamer Headphones,Electronics,$14.99 ,$20.99 
-14,Glass Marbles,Games,$5.99 ,$10.99 
-15,Hot Wheels 5-Pack,Toys,$3.99 ,$5.99 
-16,Jenga,Games,$2.99 ,$9.99 
-17,Kids Makeup Kit,Art & Crafts,$13.99 ,$19.99 
-18,Lego Bricks,Toys,$34.99 ,$39.99 
-19,Magic Sand,Art & Crafts,$13.99 ,$15.99 
-20,Mini Basketball Hoop,Sports & Outdoors,$8.99 ,$24.99 
-21,Mini Ping Pong Set,Sports & Outdoors,$6.99 ,$9.99 
-22,Monopoly,Games,$13.99 ,$19.99 
-23,Mr. Potatohead,Toys,$4.99 ,$9.99 
-24,Nerf Gun,Sports & Outdoors,$14.99 ,$19.99 
-25,PlayDoh Can,Art & Crafts,$1.99 ,$2.99 
-26,PlayDoh Playset,Art & Crafts,$20.99 ,$24.99 
-27,PlayDoh Toolkit,Art & Crafts,$3.99 ,$4.99 
-28,Playfoam,Art & Crafts,$3.99 ,$10.99 
-29,Plush Pony,Toys,$8.99 ,$19.99 
-30,Rubik's Cube,Games,$17.99 ,$19.99 
-31,Splash Balls,Sports & Outdoors,$7.99 ,$8.99 
-32,Supersoaker Water Gun,Sports & Outdoors,$11.99 ,$14.99 
-33,Teddy Bear,Toys,$10.99 ,$12.99 
-34,Toy Robot,Electronics,$20.99 ,$25.99 
-35,Uno Card Game,Games,$3.99 ,$7.99 
+id,name,category,subcategory,brand,unit_cost,base_price,shelf_life_days
+PRD-0001,Aashirvaad Atta 5kg,Grocery,Flour & Grains,Aashirvaad,160,210,365
+PRD-0002,Fortune Sunflower Oil 1L,Grocery,Edible Oil,Fortune,95,130,540
+PRD-0003,Tata Salt 1kg,Grocery,Staples,Tata,12,18,730
+PRD-0004,India Gate Basmati 5kg,Grocery,Rice,India Gate,280,380,365
+PRD-0005,Parle-G Biscuits 800g,Grocery,Snacks,Parle,38,55,90
+PRD-0006,Britannia Marie Gold 400g,Grocery,Snacks,Britannia,28,42,90
+PRD-0007,Maggi Noodles 560g (8pk),Grocery,Instant Food,Nestle,72,95,360
+PRD-0008,Knorr Soup Mix 44g,Grocery,Instant Food,Knorr,22,35,540
+PRD-0009,Haldiram Bhujia 400g,Grocery,Snacks,Haldiram,55,85,90
+PRD-0010,MDH Chhole Masala 100g,Grocery,Spices,MDH,28,45,365
+PRD-0011,Everest Garam Masala 50g,Grocery,Spices,Everest,22,38,365
+PRD-0012,Tata Tea Gold 500g,Grocery,Beverages,Tata Tea,90,135,540
+PRD-0013,Bru Coffee 200g,Grocery,Beverages,Bru,95,145,540
+PRD-0014,Kissan Mixed Fruit Jam 500g,Grocery,Spreads,Kissan,72,98,365
+PRD-0015,Amul Ghee 1L,Grocery,Dairy Products,Amul,380,490,90
+PRD-0016,Horlicks Junior 500g,Grocery,Health Drinks,Horlicks,185,260,365
+PRD-0017,Complan 500g,Grocery,Health Drinks,Complan,195,275,365
+PRD-0018,Saffola Gold Oil 1L,Grocery,Edible Oil,Saffola,110,155,540
+PRD-0019,Surf Excel 1kg,Grocery,Detergent,Surf Excel,155,210,730
+PRD-0020,Ariel Matic 1kg,Grocery,Detergent,Ariel,145,200,730
+PRD-0021,Amul Dahi 400g,Dairy,Curd,Amul,32,48,7
+PRD-0022,Mother Dairy Paneer 200g,Dairy,Paneer,Mother Dairy,65,88,5
+PRD-0023,Amul Butter 500g,Dairy,Butter,Amul,210,270,30
+PRD-0024,Amul Taaza Milk 1L,Dairy,Milk,Amul,48,62,2
+PRD-0025,Nestle Munch Milkshake 180ml,Dairy,Flavoured Milk,Nestle,25,38,10
+PRD-0026,Amul Cheese Slices 200g,Dairy,Cheese,Amul,95,130,30
+PRD-0027,Epigamia Greek Yogurt 90g,Dairy,Yogurt,Epigamia,28,45,14
+PRD-0028,Coca-Cola 2L,Beverages,Carbonated,Coca-Cola,52,75,90
+PRD-0029,Pepsi 2L,Beverages,Carbonated,Pepsi,50,72,90
+PRD-0030,Tropicana Orange 1L,Beverages,Juices,Tropicana,65,95,60
+PRD-0031,Real Guava Nectar 1L,Beverages,Juices,Dabur Real,58,88,60
+PRD-0032,Red Bull 250ml,Beverages,Energy Drinks,Red Bull,70,115,540
+PRD-0033,Bisleri Water 1L,Beverages,Water,Bisleri,8,15,365
+PRD-0034,Paperboat Aamras 250ml,Beverages,Juices,Paperboat,18,30,90
+PRD-0035,Tomato (1kg),Fresh Produce,Vegetables,Local Farm,20,40,4
+PRD-0036,Onion (1kg),Fresh Produce,Vegetables,Local Farm,22,38,14
+PRD-0037,Potato (1kg),Fresh Produce,Vegetables,Local Farm,18,30,21
+PRD-0038,Banana (Dozen),Fresh Produce,Fruits,Local Farm,28,45,5
+PRD-0039,Apple Shimla (1kg),Fresh Produce,Fruits,HP Orchards,80,130,10
+PRD-0040,Capsicum (500g),Fresh Produce,Vegetables,Local Farm,22,38,5
+PRD-0041,Cauliflower (1pc),Fresh Produce,Vegetables,Local Farm,18,30,5
+PRD-0042,Mango Alphonso (1kg),Fresh Produce,Fruits,Ratnagiri,120,200,4
+PRD-0043,Watermelon (1pc),Fresh Produce,Fruits,Local Farm,55,90,5
+PRD-0044,Spinach (250g),Fresh Produce,Vegetables,Local Farm,12,22,3
+PRD-0045,Lizol Floor Cleaner 1L,Household,Floor Cleaners,Lizol,92,140,1095
+PRD-0046,Harpic Toilet Cleaner 1L,Household,Toilet Cleaners,Harpic,82,125,1095
+PRD-0047,Colin Glass Cleaner 500ml,Household,Glass Cleaners,Colin,48,75,1095
+PRD-0048,Scotch Brite Pad (10pc),Household,Cleaning Aids,Scotch-Brite,40,65,
+PRD-0049,Good Knight Refill,Household,Pest Control,Good Knight,55,85,1095
+PRD-0050,Odomos Mosquito Repellent,Household,Pest Control,Odomos,48,75,1095
+PRD-0051,Vim Dishwash Bar 400g,Household,Dishwash,Vim,28,45,1095
+PRD-0052,Godrej Jumbo Cello Bag,Household,Storage,Godrej,55,90,
+PRD-0053,Prestige Pressure Cooker 3L,Household,Cookware,Prestige,550,850,
+PRD-0054,Pigeon Non-Stick Tawa 24cm,Household,Cookware,Pigeon,340,550,
+PRD-0055,Dove Shampoo 650ml,Personal Care,Hair Care,Dove,195,285,1095
+PRD-0056,Head & Shoulders 340ml,Personal Care,Hair Care,H&S,185,265,1095
+PRD-0057,Colgate MaxFresh 300g,Personal Care,Oral Care,Colgate,68,98,1095
+PRD-0058,Oral-B Toothbrush (2pk),Personal Care,Oral Care,Oral-B,70,110,
+PRD-0059,Dettol Soap 75g (4pk),Personal Care,Soaps,Dettol,72,110,1095
+PRD-0060,Lux Soap 100g (3pk),Personal Care,Soaps,Lux,55,85,1095
+PRD-0061,Nivea Men Face Wash 100ml,Personal Care,Skin Care,Nivea,95,155,1095
+PRD-0062,Parachute Coconut Oil 500ml,Personal Care,Hair Care,Parachute,88,135,1095
+PRD-0063,Gillette Mach3 Razor,Personal Care,Grooming,Gillette,95,175,
+PRD-0064,Whisper Ultra 30 Pads,Personal Care,Feminine Care,Whisper,88,140,
+PRD-0065,Syska LED Bulb 9W,Electronics,Lighting,Syska,85,149,
+PRD-0066,Philips Extension Board 4m,Electronics,Accessories,Philips,280,499,
+PRD-0067,boAt Bassheads 100 Earphones,Electronics,Audio,boAt,350,699,
+PRD-0068,Realme Buds 2 Earphones,Electronics,Audio,Realme,480,999,
+PRD-0069,TP-Link Mini Plug,Electronics,Smart Home,TP-Link,650,1299,
+PRD-0070,Bajaj Mixer Grinder 500W,Electronics,Appliances,Bajaj,1800,3499,
+PRD-0071,Usha Table Fan 400mm,Electronics,Appliances,Usha,1400,2499,
+PRD-0072,Orient Wall Fan 400mm,Electronics,Appliances,Orient,1100,2199,
+PRD-0073,Havells Iron 1000W,Electronics,Appliances,Havells,1200,2299,
+PRD-0074,Prestige Induction 1600W,Electronics,Appliances,Prestige,1500,2999,
+PRD-0075,Jockey Cotton T-Shirt M,Clothing,Men's Wear,Jockey,220,450,
+PRD-0076,Levi's Denim Shorts,Clothing,Men's Wear,Levi's,550,1299,
+PRD-0077,Peter England Formal Shirt,Clothing,Men's Wear,Peter England,350,799,
+PRD-0078,Van Heusen Trousers,Clothing,Men's Wear,Van Heusen,480,1099,
+PRD-0079,Biba Kurta Set Women,Clothing,Women's Wear,Biba,450,999,
+PRD-0080,W Brand Ethnic Dress,Clothing,Women's Wear,W,520,1199,
+PRD-0081,Kids Cotton Pyjama Set,Clothing,Kids Wear,Babyhug,180,399,
+PRD-0082,Woodland Casual Socks 3pk,Clothing,Accessories,Woodland,85,199,
+PRD-0083,Fruit of Loom Underwear 3pk,Clothing,Inner Wear,FOTL,190,399,
+PRD-0084,Thermal Wear Set Adults,Clothing,Winter Wear,Monte Carlo,380,849,
+PRD-0085,Lego Classic Brick Box,Toys,Building Toys,LEGO,650,1499,
+PRD-0086,Funskool Monopoly Board Game,Toys,Board Games,Funskool,350,699,
+PRD-0087,Crayola Crayons 64ct,Toys,Art & Craft,Crayola,160,329,
+PRD-0088,Hot Wheels 5 Car Pack,Toys,Die-Cast Cars,Hot Wheels,280,549,
+PRD-0089,Barbie Doll Set,Toys,Dolls,Barbie,380,799,
+PRD-0090,Nerf Blaster Disruptor,Toys,Outdoor Toys,Nerf,450,999,
+PRD-0091,Rubik's Cube 3x3,Toys,Puzzles,Rubik's,180,349,
+PRD-0092,Funskool Cricket Set,Toys,Sports Toys,Funskool,250,499,
+PRD-0093,Milton Kids Water Bottle,Toys,School Supplies,Milton,90,199,
+PRD-0094,Camlin Geometry Box,Stationery,School Supplies,Camlin,42,79,
+PRD-0095,Classmate Notebook 200pg,Stationery,Notebooks,Classmate,38,60,
+PRD-0096,Reynolds Pen 10pk,Stationery,Pens,Reynolds,28,49,
+PRD-0097,Apsara Pencil 10pk,Stationery,Pencils,Apsara,18,30,
+PRD-0098,Fevicol MR 200g,Stationery,Adhesives,Fevicol,48,75,
+PRD-0099,Scotch Tape 2pk,Stationery,Tapes,Scotch,38,65,
+PRD-0100,Diwali Puja Thali Set,Seasonal,Festival,Local,180,399,
+PRD-0101,Rangoli Color Set 12pk,Seasonal,Festival,Tikuli Art,42,80,
+PRD-0102,Agarbatti Incense 50 Sticks,Seasonal,Puja Items,Cycle,25,45,365
+PRD-0103,Cold Cream Pond's 100ml,Seasonal,Winter Care,Pond's,75,120,1095
+PRD-0104,Sunscreen Lakme SPF50 50ml,Seasonal,Summer Care,Lakme,145,230,1095
+PRD-0105,Lip Balm Himalaya,Seasonal,Winter Care,Himalaya,48,85,1095
+PRD-0106,Woolens Wash Rin 500ml,Seasonal,Winter Laundry,Rin,52,85,1095
+PRD-0107,Kite Making Kit,Seasonal,Festival,Local,35,65,
+PRD-0108,Holi Color Powder 100g,Seasonal,Festival,Local,12,22,
+PRD-0109,Christmas Decoration Box,Seasonal,Festival,Archies,95,199,

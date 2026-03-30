@@ -1,25 +1,36 @@
 # app/data/loaders/inventory_loader.py
+#
+# Loads inventory.csv into a clean DataFrame.
+# Column contract (from our generator):
+#   id, product_id, store_id, current_stock, reorder_level,
+#   expiry_date, last_restocked_at
+#
+# Internal rename: id → inventory_id
 
 import pandas as pd
 
 REQUIRED_COLUMNS = {
-    "Store_ID",
-    "Product_ID",
-    "Stock_On_Hand"
+    "id", "product_id", "store_id",
+    "current_stock", "reorder_level",
+    "expiry_date", "last_restocked_at"
 }
 
 
 def load_inventory(csv_path: str) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
 
-    missing_cols = REQUIRED_COLUMNS - set(df.columns)
-    if missing_cols:
-        raise ValueError(f"Missing columns in inventory.csv: {missing_cols}")
+    missing = REQUIRED_COLUMNS - set(df.columns)
+    if missing:
+        raise ValueError(f"[inventory_loader] Missing columns: {missing}")
 
-    df = df.rename(columns={
-        "Store_ID": "store_id",
-        "Product_ID": "product_id",
-        "Stock_On_Hand": "current_stock"
-    })
+    df = df.rename(columns={"id": "inventory_id"})
+
+    df["current_stock"]  = pd.to_numeric(df["current_stock"],  errors="coerce")
+    df["reorder_level"]  = pd.to_numeric(df["reorder_level"],  errors="coerce")
+
+    # expiry_date is nullable — non-perishables have no expiry
+    df["expiry_date"] = pd.to_datetime(df["expiry_date"], errors="coerce")
+
+    df["last_restocked_at"] = pd.to_datetime(df["last_restocked_at"], errors="coerce")
 
     return df

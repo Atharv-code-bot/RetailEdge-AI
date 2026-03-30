@@ -1,0 +1,1257 @@
+id,product_id,store_id,quantity_returned,reason,returned_at
+1,1,1,3,Defective item,2025-03-28
+2,1,1,2,Defective item,2025-11-27
+3,1,1,2,Wrong product,2026-02-28
+4,2,1,1,Damaged packaging,2025-07-07
+5,2,1,1,Wrong product,2026-02-14
+6,3,1,2,Wrong product,2025-03-25
+7,3,1,2,Wrong product,2025-06-13
+8,3,1,2,Damaged packaging,2025-12-17
+9,3,1,1,Wrong product,2025-12-22
+10,3,1,1,Wrong product,2026-01-26
+11,3,1,1,Damaged packaging,2026-02-26
+12,4,1,1,Defective item,2025-10-14
+13,4,1,1,Damaged packaging,2026-01-15
+14,7,1,2,Wrong flavour,2024-12-15
+15,7,1,3,Damaged packaging,2025-07-18
+16,7,1,1,Damaged packaging,2025-10-05
+17,7,1,2,Wrong flavour,2026-01-25
+18,8,1,2,Leaking bottle,2024-09-30
+19,8,1,1,Damaged packaging,2024-11-17
+20,8,1,2,Wrong flavour,2025-03-28
+21,8,1,1,Damaged packaging,2025-12-25
+22,8,1,1,Damaged packaging,2026-01-22
+23,9,1,1,Leaking bottle,2024-09-08
+24,9,1,3,Wrong flavour,2025-06-11
+25,9,1,1,Leaking bottle,2025-11-07
+26,10,1,1,Damaged packaging,2024-10-11
+27,11,1,3,Damaged packaging,2026-01-15
+28,12,1,1,Wrong flavour,2025-05-15
+29,12,1,3,Leaking bottle,2025-07-05
+30,12,1,1,Damaged packaging,2025-07-18
+31,12,1,1,Wrong flavour,2025-10-05
+32,14,1,2,Leaking bottle,2025-04-26
+33,14,1,2,Damaged packaging,2025-10-14
+34,14,1,1,Leaking bottle,2025-12-17
+35,15,1,3,Quality issue,2024-10-26
+36,15,1,1,Wrong product,2025-03-03
+37,15,1,1,Wrong product,2025-05-07
+38,15,1,1,Wrong product,2026-01-06
+39,15,1,3,Quality issue,2026-01-29
+40,15,1,2,Quality issue,2026-02-15
+41,15,1,3,Wrong product,2026-02-25
+42,16,1,1,Damaged packaging,2024-09-22
+43,16,1,2,Wrong product,2024-11-21
+44,16,1,2,Damaged packaging,2025-06-28
+45,16,1,1,Near expiry,2025-11-11
+46,17,1,1,Near expiry,2024-11-11
+47,17,1,3,Wrong product,2025-01-03
+48,17,1,2,Near expiry,2025-05-11
+49,17,1,1,Quality issue,2025-05-19
+50,17,1,2,Damaged packaging,2025-11-10
+51,17,1,3,Quality issue,2025-11-27
+52,17,1,2,Quality issue,2026-02-11
+53,18,1,1,Wrong product,2024-10-26
+54,18,1,2,Damaged packaging,2024-12-01
+55,18,1,3,Wrong product,2025-06-12
+56,18,1,3,Quality issue,2025-06-20
+57,18,1,3,Wrong product,2026-01-29
+58,19,1,3,Wrong product,2025-01-26
+59,19,1,2,Quality issue,2025-12-15
+60,19,1,2,Wrong product,2026-02-11
+61,20,1,3,Damaged packaging,2024-10-18
+62,20,1,2,Quality issue,2026-01-28
+63,20,1,1,Wrong product,2026-02-07
+64,20,1,2,Wrong product,2026-02-28
+65,21,1,3,Near expiry,2025-04-07
+66,21,1,3,Damaged packaging,2025-05-29
+67,22,1,3,Quality issue,2025-01-15
+68,22,1,2,Near expiry,2025-03-29
+69,22,1,1,Damaged packaging,2026-02-18
+70,23,1,3,Wrong product,2025-05-05
+71,23,1,3,Near expiry,2025-09-04
+72,24,1,3,Damaged packaging,2024-10-15
+73,24,1,1,Near expiry,2025-01-06
+74,24,1,2,Near expiry,2025-02-08
+75,24,1,1,Near expiry,2025-04-25
+76,24,1,1,Near expiry,2025-06-02
+77,24,1,3,Damaged packaging,2025-07-30
+78,24,1,3,Quality issue,2026-02-02
+79,25,1,1,Near expiry,2024-09-16
+80,25,1,1,Wrong product,2025-02-15
+81,25,1,1,Damaged packaging,2025-06-19
+82,25,1,1,Quality issue,2025-12-04
+83,26,1,3,Damaged packaging,2024-09-18
+84,26,1,1,Near expiry,2024-10-23
+85,26,1,3,Near expiry,2025-12-04
+86,26,1,1,Damaged packaging,2026-02-06
+87,27,1,1,Wrong product,2024-12-11
+88,27,1,1,Damaged packaging,2024-12-09
+89,27,1,1,Quality issue,2025-07-24
+90,28,1,3,Near expiry,2024-12-03
+91,28,1,2,Quality issue,2024-12-25
+92,28,1,3,Damaged packaging,2026-01-12
+93,29,1,3,Damaged packaging,2025-01-28
+94,29,1,2,Quality issue,2025-02-06
+95,29,1,1,Quality issue,2025-04-15
+96,29,1,2,Quality issue,2025-08-13
+97,29,1,1,Wrong product,2025-09-07
+98,29,1,1,Quality issue,2025-09-21
+99,29,1,1,Quality issue,2026-01-01
+100,30,1,1,Wrong product,2025-01-17
+101,30,1,1,Quality issue,2025-07-15
+102,30,1,1,Damaged packaging,2025-10-03
+103,30,1,1,Near expiry,2026-02-01
+104,30,1,1,Near expiry,2026-02-19
+105,31,1,2,Damaged packaging,2025-01-25
+106,31,1,1,Near expiry,2025-03-14
+107,31,1,1,Wrong product,2025-04-21
+108,31,1,2,Wrong product,2026-01-03
+109,31,1,3,Wrong product,2026-01-13
+110,32,1,2,Wrong product,2024-09-24
+111,32,1,2,Quality issue,2024-10-05
+112,32,1,2,Damaged packaging,2024-11-25
+113,32,1,1,Wrong product,2025-05-21
+114,32,1,1,Near expiry,2025-06-24
+115,32,1,2,Near expiry,2025-10-18
+116,32,1,1,Damaged packaging,2025-12-24
+117,32,1,2,Near expiry,2026-02-26
+118,33,1,3,Damaged packaging,2025-06-25
+119,33,1,1,Quality issue,2025-08-02
+120,33,1,2,Quality issue,2025-12-15
+121,33,1,1,Damaged packaging,2026-02-11
+122,34,1,2,Near expiry,2025-02-25
+123,34,1,1,Quality issue,2025-06-06
+124,34,1,1,Wrong product,2025-06-12
+125,34,1,1,Wrong product,2025-09-02
+126,35,1,2,Near expiry,2024-09-15
+127,35,1,3,Near expiry,2024-11-14
+128,35,1,1,Near expiry,2025-09-04
+129,35,1,1,Near expiry,2025-10-26
+130,35,1,1,Damaged packaging,2025-11-12
+131,35,1,1,Near expiry,2025-11-17
+132,35,1,1,Quality issue,2025-11-30
+133,35,1,1,Wrong product,2026-01-26
+134,36,1,1,Quality issue,2024-12-29
+135,37,1,1,Quality issue,2024-11-05
+136,37,1,2,Wrong product,2024-12-02
+137,37,1,3,Near expiry,2024-12-22
+138,37,1,3,Wrong product,2025-09-21
+139,37,1,1,Near expiry,2025-10-10
+140,38,1,1,Wrong product,2025-03-06
+141,38,1,1,Wrong product,2025-10-08
+142,39,1,1,Near expiry,2025-01-22
+143,39,1,1,Wrong product,2025-03-09
+144,39,1,1,Damaged packaging,2025-09-01
+145,39,1,1,Quality issue,2025-10-16
+146,39,1,1,Wrong product,2025-12-04
+147,40,1,1,Wrong product,2024-12-24
+148,40,1,2,Quality issue,2025-01-01
+149,41,1,1,Near expiry,2025-01-26
+150,41,1,1,Wrong product,2025-08-30
+151,41,1,1,Quality issue,2025-12-12
+152,42,1,2,Wrong product,2025-12-01
+153,44,1,1,Damaged packaging,2024-11-20
+154,44,1,1,Near expiry,2025-02-27
+155,44,1,1,Damaged packaging,2025-03-18
+156,44,1,1,Near expiry,2025-05-12
+157,44,1,1,Damaged packaging,2025-11-13
+158,45,1,3,Near expiry,2024-10-16
+159,45,1,2,Near expiry,2024-10-21
+160,45,1,1,Near expiry,2024-11-18
+161,45,1,2,Damaged packaging,2025-02-02
+162,45,1,1,Wrong product,2025-05-09
+163,45,1,1,Damaged packaging,2025-07-15
+164,45,1,1,Damaged packaging,2025-08-30
+165,45,1,1,Damaged packaging,2025-11-06
+166,45,1,2,Quality issue,2025-12-17
+167,45,1,1,Quality issue,2026-02-28
+168,46,1,1,Near expiry,2025-03-19
+169,46,1,1,Wrong product,2025-07-12
+170,47,1,3,Wrong product,2024-12-30
+171,50,1,1,Damaged packaging,2024-10-01
+172,50,1,3,Damaged packaging,2025-07-11
+173,51,1,1,Damaged packaging,2024-11-30
+174,51,1,3,Quality issue,2025-03-23
+175,51,1,2,Damaged packaging,2025-07-31
+176,52,1,2,Wrong product,2025-06-25
+177,52,1,2,Wrong product,2025-12-14
+178,53,1,1,Wrong product,2025-02-08
+179,53,1,1,Damaged packaging,2025-08-31
+180,54,1,3,Wrong product,2025-07-09
+181,55,1,3,Quality issue,2025-05-12
+182,55,1,2,Quality issue,2025-06-25
+183,55,1,1,Damaged packaging,2025-08-04
+184,55,1,2,Damaged packaging,2025-11-18
+185,55,1,3,Quality issue,2026-02-18
+186,56,1,1,Damaged packaging,2024-12-18
+187,56,1,3,Quality issue,2025-01-04
+188,56,1,3,Wrong product,2025-03-20
+189,56,1,2,Quality issue,2025-05-09
+190,57,1,2,Damaged packaging,2025-06-12
+191,58,1,1,Damaged packaging,2025-01-17
+192,58,1,1,Damaged packaging,2025-08-24
+193,58,1,1,Wrong product,2025-09-13
+194,58,1,1,Damaged packaging,2026-02-14
+195,59,1,2,Damaged packaging,2024-12-03
+196,59,1,1,Wrong product,2025-01-10
+197,59,1,3,Wrong product,2026-02-12
+198,59,1,2,Damaged packaging,2026-02-24
+199,60,1,1,Damaged packaging,2024-10-29
+200,60,1,1,Wrong product,2025-06-27
+201,60,1,1,Damaged packaging,2026-01-16
+202,60,1,1,Wrong product,2026-02-19
+203,60,1,1,Wrong product,2026-02-28
+204,61,1,1,Wrong product,2024-11-26
+205,61,1,1,Damaged packaging,2025-05-13
+206,61,1,1,Wrong product,2026-02-02
+207,62,1,3,Damaged packaging,2025-04-16
+208,62,1,2,Damaged packaging,2025-11-29
+209,63,1,1,Damaged packaging,2024-09-14
+210,63,1,1,Quality issue,2024-11-14
+211,63,1,2,Wrong product,2024-12-08
+212,63,1,1,Wrong product,2026-02-04
+213,64,1,1,Wrong product,2024-10-21
+214,64,1,1,Quality issue,2024-12-05
+215,64,1,1,Damaged packaging,2025-07-02
+216,65,1,3,Defective item,2024-11-14
+217,65,1,2,Damaged packaging,2025-02-02
+218,65,1,2,Defective item,2025-08-03
+219,65,1,3,Damaged packaging,2025-11-20
+220,66,1,3,Wrong variant,2025-07-24
+221,67,1,1,Wrong variant,2025-03-17
+222,67,1,1,Wrong variant,2025-09-07
+223,67,1,2,Wrong variant,2025-12-29
+224,68,1,2,Defective item,2026-02-18
+225,69,1,2,Damaged packaging,2025-11-14
+226,69,1,3,Damaged packaging,2025-12-14
+227,69,1,3,Wrong variant,2025-12-30
+228,70,1,2,Defective item,2025-11-24
+229,71,1,3,Damaged packaging,2025-01-22
+230,71,1,1,Defective item,2025-03-11
+231,71,1,2,Defective item,2025-09-27
+232,71,1,2,Wrong variant,2025-12-29
+233,72,1,2,Defective item,2024-11-21
+234,73,1,1,Wrong variant,2024-10-14
+235,73,1,2,Damaged packaging,2025-12-17
+236,74,1,3,Wrong variant,2024-11-11
+237,74,1,2,Defective item,2025-06-27
+238,75,1,3,Expired product,2024-12-07
+239,75,1,2,Wrong product,2025-03-01
+240,75,1,1,Damaged packaging,2026-01-10
+241,75,1,2,Wrong product,2026-01-26
+242,76,1,1,Expired product,2025-10-03
+243,76,1,1,Wrong product,2025-10-18
+244,76,1,1,Expired product,2025-12-12
+245,77,1,2,Damaged packaging,2024-10-01
+246,77,1,2,Expired product,2024-10-14
+247,77,1,1,Damaged packaging,2025-04-02
+248,77,1,2,Wrong product,2025-05-09
+249,77,1,2,Damaged packaging,2025-08-04
+250,77,1,1,Expired product,2025-08-17
+251,77,1,1,Expired product,2025-10-19
+252,77,1,1,Damaged packaging,2026-02-11
+253,78,1,2,Expired product,2024-12-13
+254,78,1,2,Expired product,2025-04-29
+255,78,1,1,Wrong product,2025-05-03
+256,78,1,1,Damaged packaging,2025-08-02
+257,78,1,3,Expired product,2026-02-15
+258,79,1,1,Wrong product,2024-09-30
+259,79,1,1,Expired product,2024-12-31
+260,79,1,2,Damaged packaging,2025-01-17
+261,79,1,1,Expired product,2025-05-25
+262,79,1,1,Wrong product,2025-07-08
+263,79,1,2,Wrong product,2025-08-05
+264,79,1,1,Damaged packaging,2025-09-10
+265,79,1,1,Wrong product,2026-01-30
+266,80,1,3,Wrong product,2025-01-17
+267,80,1,3,Wrong product,2025-02-13
+268,80,1,3,Wrong product,2025-03-23
+269,80,1,2,Damaged packaging,2025-08-23
+270,80,1,3,Expired product,2025-11-08
+271,80,1,2,Expired product,2025-12-31
+272,81,1,1,Wrong product,2025-01-21
+273,81,1,1,Wrong product,2025-01-31
+274,81,1,1,Damaged packaging,2026-01-31
+275,82,1,2,Near expiry,2025-03-10
+276,82,1,1,Near expiry,2025-05-11
+277,82,1,2,Quality issue,2025-11-12
+278,83,1,2,Damaged packaging,2025-08-23
+279,84,1,1,Damaged packaging,2025-01-13
+280,84,1,2,Damaged packaging,2025-03-08
+281,84,1,1,Near expiry,2025-06-28
+282,84,1,3,Quality issue,2025-07-11
+283,84,1,2,Near expiry,2025-12-06
+284,84,1,3,Near expiry,2026-02-02
+285,85,1,1,Damaged packaging,2024-09-19
+286,85,1,1,Near expiry,2025-04-19
+287,85,1,1,Near expiry,2025-09-11
+288,85,1,1,Damaged packaging,2026-02-01
+289,86,1,3,Near expiry,2025-01-18
+290,86,1,2,Quality issue,2025-04-21
+291,86,1,1,Near expiry,2025-10-01
+292,87,1,3,Quality issue,2024-11-17
+293,87,1,1,Near expiry,2025-05-10
+294,87,1,2,Damaged packaging,2025-06-13
+295,87,1,1,Damaged packaging,2025-07-15
+296,87,1,1,Damaged packaging,2025-09-08
+297,87,1,1,Near expiry,2025-10-16
+298,87,1,1,Damaged packaging,2025-11-24
+299,88,1,1,Near expiry,2025-06-03
+300,89,1,1,Near expiry,2024-11-28
+301,89,1,2,Quality issue,2025-01-20
+302,89,1,1,Quality issue,2025-08-28
+303,89,1,2,Quality issue,2025-11-07
+304,90,1,1,Quality issue,2024-10-13
+305,90,1,1,Damaged packaging,2024-12-25
+306,90,1,1,Damaged packaging,2025-09-18
+307,91,1,3,Wrong variant,2024-09-30
+308,91,1,1,Allergic reaction,2024-10-13
+309,91,1,2,Damaged packaging,2024-11-18
+310,91,1,2,Damaged packaging,2025-05-20
+311,91,1,3,Wrong variant,2025-08-06
+312,91,1,2,Wrong variant,2025-09-22
+313,91,1,2,Wrong variant,2025-11-29
+314,91,1,1,Damaged packaging,2025-12-09
+315,91,1,3,Damaged packaging,2026-01-30
+316,92,1,3,Damaged packaging,2024-10-04
+317,92,1,3,Allergic reaction,2024-11-22
+318,92,1,2,Wrong variant,2025-01-18
+319,92,1,1,Damaged packaging,2025-02-01
+320,92,1,1,Wrong variant,2025-02-04
+321,92,1,1,Wrong variant,2025-02-12
+322,92,1,2,Damaged packaging,2025-07-21
+323,92,1,2,Wrong variant,2025-07-22
+324,92,1,1,Damaged packaging,2025-11-01
+325,92,1,2,Damaged packaging,2025-10-31
+326,92,1,1,Wrong variant,2025-11-25
+327,92,1,1,Wrong variant,2025-11-28
+328,92,1,2,Allergic reaction,2026-02-03
+329,93,1,1,Damaged packaging,2024-09-26
+330,93,1,1,Allergic reaction,2025-02-05
+331,93,1,1,Wrong variant,2025-03-02
+332,93,1,1,Damaged packaging,2025-04-08
+333,93,1,1,Wrong variant,2025-05-02
+334,93,1,1,Allergic reaction,2025-04-25
+335,93,1,1,Damaged packaging,2025-05-09
+336,93,1,1,Allergic reaction,2025-09-03
+337,94,1,1,Damaged packaging,2025-04-23
+338,94,1,1,Allergic reaction,2025-06-22
+339,94,1,1,Damaged packaging,2026-01-09
+340,94,1,1,Wrong variant,2026-02-24
+341,95,1,3,Wrong variant,2024-10-04
+342,95,1,3,Wrong variant,2024-10-27
+343,95,1,3,Allergic reaction,2025-01-10
+344,95,1,2,Wrong variant,2025-07-08
+345,95,1,1,Wrong variant,2025-07-12
+346,96,1,1,Damaged packaging,2024-10-27
+347,96,1,1,Wrong variant,2024-11-24
+348,96,1,1,Damaged packaging,2025-01-13
+349,96,1,1,Damaged packaging,2025-04-14
+350,96,1,1,Damaged packaging,2025-06-14
+351,96,1,1,Damaged packaging,2025-06-30
+352,96,1,1,Wrong variant,2025-07-12
+353,96,1,3,Allergic reaction,2025-10-30
+354,96,1,1,Wrong variant,2026-02-20
+355,97,1,1,Damaged packaging,2025-06-12
+356,99,1,3,Wrong product,2025-12-16
+357,99,1,1,Damaged packaging,2025-12-30
+358,100,1,2,Quality issue,2025-03-23
+359,100,1,2,Damaged packaging,2025-06-01
+360,100,1,2,Damaged packaging,2025-09-10
+361,102,1,1,Damaged packaging,2024-10-28
+362,103,1,2,Quality issue,2024-09-26
+363,103,1,1,Damaged packaging,2024-12-13
+364,103,1,3,Wrong product,2025-05-05
+365,103,1,3,Quality issue,2025-09-08
+366,103,1,3,Wrong product,2026-02-28
+367,104,1,2,Quality issue,2024-10-09
+368,104,1,2,Wrong product,2025-04-02
+369,104,1,2,Quality issue,2025-10-23
+370,105,1,1,Wrong product,2024-10-07
+371,105,1,2,Quality issue,2025-03-03
+372,105,1,1,Wrong product,2025-06-13
+373,105,1,1,Damaged packaging,2025-08-30
+374,105,1,1,Damaged packaging,2025-09-25
+375,105,1,2,Damaged packaging,2026-02-17
+376,107,1,1,Quality issue,2024-10-12
+377,107,1,2,Damaged packaging,2025-01-14
+378,107,1,3,Wrong product,2025-03-05
+379,107,1,1,Quality issue,2025-09-23
+380,107,1,1,Quality issue,2026-02-28
+381,108,1,3,Damaged packaging,2024-09-26
+382,108,1,1,Quality issue,2024-10-25
+383,108,1,3,Damaged packaging,2025-03-01
+384,108,1,3,Quality issue,2025-08-21
+385,108,1,3,Damaged packaging,2026-01-05
+386,109,1,2,Damaged packaging,2024-10-21
+387,109,1,2,Damaged packaging,2025-02-23
+388,109,1,1,Quality issue,2025-05-07
+389,110,1,2,Defective item,2024-10-30
+390,110,1,1,Defective item,2025-01-06
+391,110,1,1,Wrong product,2025-05-01
+392,110,1,1,Damaged packaging,2025-09-01
+393,110,1,3,Wrong product,2026-01-09
+394,111,1,2,Expired,2024-10-11
+395,111,1,1,Damaged packaging,2024-11-08
+396,111,1,2,Damaged packaging,2024-11-18
+397,111,1,3,Allergic reaction,2025-01-28
+398,111,1,1,Damaged packaging,2025-05-04
+399,111,1,3,Wrong variant,2025-09-06
+400,111,1,1,Wrong variant,2025-12-24
+401,111,1,3,Damaged packaging,2026-01-11
+402,112,1,1,Damaged packaging,2024-10-14
+403,112,1,1,Damaged packaging,2025-02-03
+404,112,1,1,Wrong variant,2025-03-20
+405,112,1,1,Wrong variant,2025-07-29
+406,112,1,1,Allergic reaction,2025-10-08
+407,112,1,1,Wrong variant,2025-11-08
+408,112,1,2,Wrong variant,2025-11-17
+409,112,1,1,Wrong variant,2026-01-18
+410,113,1,1,Allergic reaction,2024-12-02
+411,113,1,1,Wrong variant,2025-02-17
+412,113,1,1,Expired,2025-03-11
+413,113,1,1,Expired,2026-02-28
+414,114,1,1,Wrong product,2024-11-15
+415,114,1,1,Damaged packaging,2025-07-19
+416,114,1,1,Quality issue,2026-02-26
+417,114,1,1,Damaged packaging,2026-02-24
+418,115,1,1,Quality issue,2024-09-13
+419,115,1,2,Wrong product,2024-11-18
+420,115,1,1,Quality issue,2025-04-06
+421,115,1,1,Damaged packaging,2025-04-06
+422,115,1,1,Damaged packaging,2025-05-31
+423,115,1,1,Wrong product,2025-10-07
+424,115,1,1,Damaged packaging,2025-12-31
+425,116,1,1,Wrong product,2024-09-22
+426,116,1,1,Wrong product,2024-11-08
+427,116,1,2,Wrong product,2025-09-02
+428,116,1,2,Wrong product,2025-11-03
+429,116,1,1,Quality issue,2025-12-07
+430,117,1,2,Damaged packaging,2024-09-27
+431,117,1,1,Damaged packaging,2024-11-18
+432,117,1,1,Quality issue,2025-02-01
+433,117,1,2,Wrong product,2025-02-24
+434,117,1,1,Quality issue,2025-05-10
+435,117,1,1,Quality issue,2025-06-24
+436,117,1,3,Wrong product,2025-07-12
+437,117,1,2,Wrong product,2025-07-23
+438,117,1,2,Damaged packaging,2025-08-02
+439,117,1,2,Quality issue,2025-11-01
+440,117,1,1,Damaged packaging,2025-12-03
+441,117,1,1,Quality issue,2026-02-27
+442,118,1,1,Damaged packaging,2025-10-30
+443,119,1,1,Damaged packaging,2024-09-14
+444,119,1,2,Wrong product,2024-09-10
+445,119,1,1,Damaged packaging,2024-09-20
+446,119,1,1,Damaged packaging,2025-07-29
+447,119,1,2,Wrong product,2025-08-15
+448,119,1,1,Damaged packaging,2025-09-05
+449,119,1,1,Wrong product,2025-10-16
+450,119,1,1,Defective item,2025-11-21
+451,119,1,3,Defective item,2026-01-03
+452,120,1,2,Damaged packaging,2024-10-11
+453,121,1,2,Quality issue,2024-12-06
+454,121,1,1,Quality issue,2025-10-02
+455,121,1,2,Damaged packaging,2025-12-06
+456,121,1,1,Damaged packaging,2026-02-05
+457,122,1,1,Wrong product,2025-08-17
+458,122,1,2,Quality issue,2025-10-23
+459,122,1,2,Damaged packaging,2025-11-18
+460,123,1,1,Wrong product,2024-12-08
+461,123,1,1,Quality issue,2025-02-03
+462,123,1,1,Damaged packaging,2025-02-12
+463,123,1,1,Wrong product,2025-04-06
+464,123,1,1,Damaged packaging,2025-09-23
+465,123,1,2,Quality issue,2025-11-16
+466,124,1,1,Quality issue,2025-07-28
+467,124,1,1,Quality issue,2025-12-23
+468,124,1,1,Wrong product,2026-01-12
+469,126,1,1,Spoiled,2024-09-15
+470,126,1,2,Expired product,2024-09-25
+471,126,1,2,Expired product,2024-10-08
+472,126,1,1,Spoiled,2024-10-13
+473,126,1,2,Expired product,2024-10-31
+474,126,1,2,Expired product,2025-03-19
+475,126,1,1,Wrong variant,2025-04-02
+476,126,1,2,Wrong variant,2025-04-14
+477,126,1,2,Wrong variant,2025-04-17
+478,126,1,2,Spoiled,2025-05-01
+479,126,1,3,Expired product,2025-08-18
+480,126,1,1,Spoiled,2025-10-18
+481,126,1,3,Wrong variant,2025-10-27
+482,126,1,2,Spoiled,2026-02-16
+483,127,1,1,Wrong variant,2024-10-16
+484,127,1,1,Wrong variant,2024-11-22
+485,127,1,1,Spoiled,2024-12-10
+486,127,1,2,Spoiled,2024-12-06
+487,127,1,2,Expired product,2024-12-14
+488,127,1,2,Spoiled,2024-12-17
+489,127,1,2,Expired product,2024-12-30
+490,127,1,2,Wrong variant,2025-02-13
+491,127,1,1,Expired product,2025-03-30
+492,127,1,3,Expired product,2025-04-26
+493,127,1,1,Spoiled,2025-04-21
+494,127,1,3,Spoiled,2025-05-18
+495,127,1,1,Expired product,2025-06-12
+496,127,1,3,Expired product,2025-06-27
+497,127,1,3,Expired product,2025-10-23
+498,127,1,2,Wrong variant,2025-12-04
+499,127,1,1,Expired product,2025-12-01
+500,127,1,3,Expired product,2025-12-17
+501,128,1,3,Wrong variant,2024-10-24
+502,128,1,1,Spoiled,2024-12-06
+503,128,1,3,Wrong variant,2025-02-11
+504,128,1,3,Expired product,2025-02-06
+505,128,1,1,Wrong variant,2025-04-07
+506,128,1,2,Wrong variant,2025-04-04
+507,128,1,3,Expired product,2025-05-31
+508,128,1,1,Spoiled,2025-06-19
+509,128,1,3,Expired product,2025-06-30
+510,128,1,2,Wrong variant,2025-08-19
+511,128,1,3,Wrong variant,2025-08-20
+512,128,1,2,Wrong variant,2025-09-05
+513,128,1,1,Wrong variant,2025-10-04
+514,128,1,2,Spoiled,2025-10-11
+515,128,1,3,Spoiled,2025-10-15
+516,128,1,2,Wrong variant,2025-10-20
+517,128,1,2,Expired product,2025-10-30
+518,128,1,2,Spoiled,2026-01-19
+519,128,1,1,Spoiled,2026-02-07
+520,128,1,1,Expired product,2026-02-28
+521,129,1,3,Expired product,2024-09-18
+522,129,1,2,Expired product,2024-09-30
+523,129,1,2,Spoiled,2024-10-17
+524,129,1,1,Spoiled,2025-01-24
+525,129,1,3,Spoiled,2025-01-31
+526,129,1,3,Wrong variant,2025-03-25
+527,129,1,2,Wrong variant,2025-04-18
+528,129,1,3,Spoiled,2025-04-15
+529,129,1,2,Spoiled,2025-05-19
+530,129,1,1,Spoiled,2025-07-12
+531,129,1,1,Wrong variant,2025-07-24
+532,129,1,1,Expired product,2025-08-29
+533,129,1,1,Expired product,2025-09-02
+534,129,1,2,Spoiled,2025-09-18
+535,129,1,3,Wrong variant,2025-11-29
+536,129,1,1,Expired product,2026-01-11
+537,129,1,1,Expired product,2026-01-27
+538,129,1,2,Spoiled,2026-02-07
+539,130,1,2,Expired product,2024-09-26
+540,130,1,1,Expired product,2024-10-14
+541,130,1,1,Wrong variant,2024-10-24
+542,130,1,1,Spoiled,2024-10-19
+543,130,1,1,Spoiled,2024-11-09
+544,130,1,1,Spoiled,2024-11-24
+545,130,1,1,Spoiled,2025-01-04
+546,130,1,1,Spoiled,2025-05-01
+547,130,1,1,Spoiled,2025-05-11
+548,130,1,1,Spoiled,2025-07-03
+549,130,1,1,Wrong variant,2025-09-12
+550,130,1,1,Expired product,2026-01-31
+551,130,1,1,Wrong variant,2026-02-27
+552,130,1,2,Expired product,2026-02-28
+553,131,1,2,Wrong product,2024-12-27
+554,131,1,3,Damaged packaging,2025-01-16
+555,131,1,1,Damaged packaging,2025-05-20
+556,132,1,1,Quality issue,2025-07-29
+557,132,1,1,Quality issue,2025-08-25
+558,133,1,2,Quality issue,2024-12-10
+559,133,1,1,Damaged packaging,2025-03-03
+560,133,1,3,Quality issue,2025-03-25
+561,133,1,2,Damaged packaging,2025-06-09
+562,133,1,3,Quality issue,2025-10-22
+563,133,1,1,Wrong product,2026-02-17
+564,134,1,1,Damaged packaging,2025-02-22
+565,134,1,1,Wrong product,2025-04-14
+566,134,1,1,Wrong product,2025-05-08
+567,134,1,1,Quality issue,2025-07-04
+568,134,1,1,Wrong product,2025-07-21
+569,134,1,1,Wrong product,2025-09-14
+570,135,1,1,Damaged packaging,2024-09-25
+571,135,1,1,Quality issue,2024-12-05
+572,135,1,1,Damaged packaging,2024-12-21
+573,135,1,1,Wrong product,2025-01-23
+574,135,1,1,Quality issue,2025-02-18
+575,135,1,1,Damaged packaging,2025-03-10
+576,135,1,1,Quality issue,2025-03-29
+577,135,1,1,Damaged packaging,2025-04-04
+578,135,1,1,Damaged packaging,2025-07-13
+579,135,1,1,Wrong product,2025-08-19
+580,135,1,1,Damaged packaging,2025-09-07
+581,135,1,2,Quality issue,2025-11-05
+582,135,1,1,Quality issue,2025-12-20
+583,135,1,1,Quality issue,2025-12-29
+584,135,1,1,Damaged packaging,2026-02-28
+585,135,1,1,Damaged packaging,2026-02-28
+586,136,1,1,Wrong product,2024-12-07
+587,136,1,2,Quality issue,2025-01-04
+588,136,1,3,Wrong product,2025-02-07
+589,136,1,1,Damaged packaging,2025-04-06
+590,136,1,2,Wrong product,2025-05-27
+591,136,1,2,Wrong product,2025-12-19
+592,136,1,2,Wrong product,2026-02-28
+593,137,1,3,Damaged packaging,2025-04-29
+594,137,1,2,Damaged packaging,2025-09-28
+595,137,1,1,Damaged packaging,2025-11-13
+596,137,1,1,Wrong product,2025-12-22
+597,137,1,1,Quality issue,2026-02-06
+598,138,1,1,Quality issue,2025-02-04
+599,138,1,3,Quality issue,2025-05-19
+600,138,1,1,Damaged packaging,2025-07-30
+601,138,1,2,Wrong product,2025-11-05
+602,139,1,3,Wrong product,2025-01-07
+603,139,1,1,Quality issue,2025-08-24
+604,139,1,1,Wrong product,2025-09-11
+605,139,1,1,Quality issue,2025-10-27
+606,139,1,1,Quality issue,2025-11-12
+607,140,1,1,Wrong product,2024-09-23
+608,140,1,1,Quality issue,2024-10-08
+609,140,1,1,Damaged packaging,2024-10-28
+610,142,1,1,Quality issue,2025-02-26
+611,142,1,2,Damaged packaging,2025-09-29
+612,142,1,2,Damaged packaging,2025-12-12
+613,142,1,1,Wrong product,2026-01-08
+614,142,1,1,Wrong product,2026-01-31
+615,143,1,1,Quality issue,2025-09-02
+616,144,1,1,Damaged packaging,2024-10-07
+617,144,1,1,Damaged packaging,2024-12-28
+618,144,1,2,Quality issue,2025-12-31
+619,145,1,3,Damaged packaging,2024-11-19
+620,145,1,3,Damaged packaging,2024-11-19
+621,146,1,1,Quality issue,2025-04-02
+622,146,1,1,Wrong product,2025-04-07
+623,146,1,1,Wrong product,2025-05-01
+624,146,1,2,Quality issue,2026-01-12
+625,146,1,1,Wrong product,2026-02-02
+626,147,1,1,Quality issue,2025-12-08
+627,148,1,1,Quality issue,2025-02-16
+628,148,1,1,Wrong product,2025-05-26
+629,149,1,1,Wrong product,2024-11-14
+630,149,1,1,Damaged packaging,2025-10-31
+631,150,1,3,Quality issue,2024-12-21
+632,150,1,2,Quality issue,2025-01-08
+633,150,1,1,Damaged packaging,2025-01-30
+634,150,1,1,Quality issue,2025-07-30
+635,150,1,3,Wrong product,2026-01-24
+636,150,1,2,Quality issue,2026-02-28
+637,151,1,1,Wrong product,2025-02-02
+638,151,1,1,Damaged packaging,2025-04-14
+639,151,1,1,Damaged packaging,2025-09-21
+640,152,1,1,Wrong product,2024-09-18
+641,152,1,1,Quality issue,2024-10-11
+642,152,1,1,Damaged packaging,2024-12-12
+643,152,1,1,Damaged packaging,2024-12-05
+644,152,1,1,Wrong product,2024-12-14
+645,152,1,1,Damaged packaging,2025-01-13
+646,152,1,1,Wrong product,2025-04-06
+647,152,1,1,Wrong product,2025-04-17
+648,152,1,1,Quality issue,2025-05-25
+649,152,1,1,Quality issue,2025-08-10
+650,152,1,1,Damaged packaging,2025-09-03
+651,152,1,1,Quality issue,2025-09-22
+652,152,1,1,Quality issue,2025-11-07
+653,152,1,1,Quality issue,2025-11-07
+654,152,1,1,Damaged packaging,2025-11-27
+655,152,1,1,Quality issue,2026-01-15
+656,153,1,2,Wrong product,2024-10-14
+657,153,1,2,Quality issue,2025-03-09
+658,153,1,2,Wrong product,2025-03-25
+659,153,1,2,Damaged packaging,2025-06-16
+660,153,1,2,Quality issue,2025-08-09
+661,153,1,1,Quality issue,2025-08-10
+662,153,1,1,Wrong product,2025-12-06
+663,153,1,1,Damaged packaging,2025-12-17
+664,153,1,1,Damaged packaging,2026-02-15
+665,154,1,1,Wrong product,2024-10-27
+666,154,1,1,Wrong product,2025-02-23
+667,154,1,1,Damaged packaging,2025-03-01
+668,154,1,1,Wrong product,2025-04-09
+669,154,1,1,Quality issue,2025-07-19
+670,154,1,1,Wrong product,2025-08-06
+671,154,1,1,Wrong product,2025-12-03
+672,155,1,1,Quality issue,2025-03-25
+673,155,1,1,Damaged packaging,2025-05-09
+674,155,1,1,Wrong product,2025-06-01
+675,155,1,1,Wrong product,2025-08-26
+676,155,1,1,Quality issue,2025-12-15
+677,155,1,1,Damaged packaging,2026-02-05
+678,156,1,1,Damaged packaging,2025-01-12
+679,156,1,1,Wrong product,2025-04-17
+680,156,1,1,Quality issue,2025-04-15
+681,156,1,1,Wrong product,2025-05-05
+682,156,1,1,Quality issue,2025-06-09
+683,156,1,1,Wrong product,2025-06-23
+684,156,1,1,Damaged packaging,2025-08-02
+685,156,1,2,Wrong product,2025-10-25
+686,156,1,1,Wrong product,2026-01-27
+687,157,1,1,Quality issue,2024-10-24
+688,157,1,1,Damaged packaging,2024-11-01
+689,157,1,1,Damaged packaging,2024-12-09
+690,157,1,1,Quality issue,2025-04-15
+691,157,1,1,Damaged packaging,2025-04-27
+692,157,1,1,Damaged packaging,2025-06-01
+693,157,1,1,Quality issue,2025-11-19
+694,157,1,1,Wrong product,2026-01-20
+695,158,1,2,Near expiry,2024-10-14
+696,158,1,2,Damaged packaging,2024-10-27
+697,158,1,1,Quality issue,2025-05-23
+698,158,1,2,Quality issue,2025-06-17
+699,158,1,1,Damaged packaging,2026-02-19
+700,159,1,1,Wrong product,2025-03-16
+701,159,1,1,Damaged packaging,2025-03-17
+702,159,1,1,Damaged packaging,2025-08-15
+703,159,1,1,Quality issue,2026-02-06
+704,160,1,1,Damaged packaging,2025-09-30
+705,160,1,2,Damaged packaging,2025-11-22
+706,160,1,2,Near expiry,2026-02-28
+707,161,1,1,Near expiry,2024-12-06
+708,161,1,1,Damaged packaging,2025-02-19
+709,161,1,1,Damaged packaging,2025-03-15
+710,161,1,2,Quality issue,2025-06-29
+711,161,1,2,Quality issue,2025-09-06
+712,162,1,1,Wrong product,2024-11-02
+713,162,1,1,Quality issue,2024-12-03
+714,162,1,1,Wrong product,2025-05-20
+715,162,1,1,Quality issue,2025-10-14
+716,163,1,1,Wrong product,2024-11-01
+717,163,1,1,Wrong product,2024-11-02
+718,163,1,1,Damaged packaging,2024-11-13
+719,163,1,1,Near expiry,2024-12-27
+720,163,1,1,Quality issue,2025-07-22
+721,163,1,1,Damaged packaging,2026-01-14
+722,164,1,1,Wrong product,2025-09-24
+723,165,1,1,Near expiry,2024-11-23
+724,165,1,2,Wrong product,2025-11-06
+725,166,1,2,Wrong product,2025-01-09
+726,166,1,1,Near expiry,2025-07-21
+727,166,1,2,Wrong product,2025-10-30
+728,166,1,1,Wrong product,2026-01-15
+729,167,1,1,Quality issue,2024-11-28
+730,167,1,1,Wrong product,2025-05-12
+731,167,1,1,Near expiry,2025-08-26
+732,167,1,1,Wrong product,2026-01-07
+733,167,1,1,Near expiry,2026-02-09
+734,168,1,1,Damaged packaging,2024-12-15
+735,169,1,2,Near expiry,2024-12-16
+736,169,1,3,Quality issue,2025-01-11
+737,169,1,1,Quality issue,2025-01-02
+738,169,1,1,Damaged packaging,2025-08-01
+739,169,1,3,Near expiry,2025-08-16
+740,170,1,1,Wrong product,2024-12-25
+741,170,1,1,Near expiry,2025-03-25
+742,170,1,1,Near expiry,2025-08-01
+743,170,1,1,Damaged packaging,2025-08-09
+744,170,1,1,Quality issue,2025-09-13
+745,170,1,2,Quality issue,2025-10-15
+746,170,1,1,Wrong product,2025-11-27
+747,171,1,1,Near expiry,2025-04-07
+748,171,1,1,Wrong product,2025-05-12
+749,171,1,1,Quality issue,2026-02-27
+750,171,1,1,Wrong product,2026-02-27
+751,172,1,2,Near expiry,2024-09-27
+752,172,1,1,Quality issue,2025-03-16
+753,172,1,1,Quality issue,2025-04-11
+754,172,1,2,Near expiry,2025-10-17
+755,172,1,1,Wrong product,2026-02-05
+756,173,1,1,Wrong variant,2024-11-16
+757,173,1,1,Wrong variant,2024-12-15
+758,173,1,1,Wrong variant,2025-02-09
+759,173,1,1,Expired,2025-05-20
+760,173,1,1,Allergic reaction,2025-11-27
+761,174,1,1,Wrong variant,2024-10-14
+762,174,1,1,Allergic reaction,2024-10-27
+763,174,1,1,Allergic reaction,2024-12-20
+764,174,1,1,Damaged packaging,2024-12-27
+765,174,1,1,Expired,2025-01-17
+766,174,1,1,Allergic reaction,2025-04-12
+767,174,1,1,Allergic reaction,2025-06-06
+768,174,1,1,Allergic reaction,2025-07-22
+769,174,1,1,Wrong variant,2025-08-06
+770,174,1,1,Expired,2025-09-04
+771,174,1,1,Wrong variant,2025-09-11
+772,174,1,1,Allergic reaction,2025-10-14
+773,174,1,1,Expired,2025-12-16
+774,174,1,1,Damaged packaging,2026-01-09
+775,174,1,1,Expired,2026-01-21
+776,174,1,1,Expired,2026-02-09
+777,174,1,1,Damaged packaging,2026-02-18
+778,175,1,2,Wrong variant,2024-10-16
+779,175,1,2,Expired,2024-11-10
+780,175,1,2,Expired,2025-03-04
+781,175,1,1,Damaged packaging,2025-04-17
+782,175,1,2,Wrong variant,2025-06-19
+783,175,1,1,Damaged packaging,2026-01-11
+784,175,1,1,Allergic reaction,2026-01-29
+785,175,1,2,Damaged packaging,2026-02-24
+786,176,1,1,Damaged packaging,2024-10-29
+787,176,1,1,Quality issue,2024-11-17
+788,176,1,2,Wrong product,2025-01-07
+789,176,1,1,Damaged packaging,2025-01-11
+790,176,1,1,Quality issue,2025-01-22
+791,176,1,2,Damaged packaging,2025-02-16
+792,176,1,2,Quality issue,2025-05-08
+793,176,1,3,Damaged packaging,2025-06-05
+794,176,1,1,Quality issue,2025-05-28
+795,176,1,2,Quality issue,2026-02-28
+796,177,1,1,Quality issue,2025-06-19
+797,177,1,2,Damaged packaging,2025-06-26
+798,177,1,1,Quality issue,2025-07-07
+799,177,1,1,Damaged packaging,2025-09-21
+800,177,1,1,Wrong product,2025-10-22
+801,178,1,1,Wrong product,2024-11-02
+802,178,1,1,Quality issue,2025-04-03
+803,178,1,1,Quality issue,2026-01-09
+804,178,1,1,Quality issue,2026-02-09
+805,179,1,1,Damaged packaging,2024-11-30
+806,179,1,1,Quality issue,2025-01-25
+807,179,1,1,Wrong product,2025-02-10
+808,179,1,1,Wrong product,2025-02-19
+809,179,1,1,Quality issue,2025-02-26
+810,179,1,1,Damaged packaging,2025-03-01
+811,179,1,1,Wrong product,2025-04-01
+812,179,1,1,Wrong product,2025-05-09
+813,179,1,1,Wrong product,2025-06-08
+814,180,1,1,Wrong variant,2025-02-08
+815,180,1,2,Spoiled,2025-02-17
+816,180,1,2,Expired product,2025-03-02
+817,180,1,2,Spoiled,2025-06-22
+818,180,1,2,Expired product,2025-06-16
+819,180,1,1,Spoiled,2025-06-26
+820,180,1,2,Wrong variant,2025-06-29
+821,180,1,1,Expired product,2025-08-15
+822,180,1,1,Spoiled,2025-08-17
+823,180,1,2,Spoiled,2025-09-08
+824,180,1,1,Spoiled,2025-09-14
+825,180,1,1,Wrong variant,2025-09-18
+826,180,1,1,Wrong variant,2025-10-26
+827,180,1,1,Expired product,2026-02-04
+828,180,1,2,Wrong variant,2026-02-28
+829,181,1,2,Damaged,2024-12-08
+830,181,1,1,Incorrect expiry,2025-01-11
+831,181,1,2,Incorrect expiry,2025-01-30
+832,181,1,1,Incorrect expiry,2025-06-12
+833,181,1,2,Incorrect expiry,2025-06-30
+834,181,1,1,Mold found,2025-08-25
+835,181,1,2,Damaged,2025-09-08
+836,181,1,2,Damaged,2025-09-17
+837,181,1,2,Mold found,2025-10-06
+838,181,1,2,Mold found,2025-12-23
+839,181,1,2,Damaged,2026-01-07
+840,181,1,2,Incorrect expiry,2026-01-19
+841,181,1,3,Damaged,2026-02-25
+842,182,1,1,Damaged,2024-10-10
+843,182,1,1,Damaged,2024-11-27
+844,182,1,1,Incorrect expiry,2025-02-17
+845,182,1,2,Incorrect expiry,2025-03-27
+846,182,1,1,Incorrect expiry,2025-04-21
+847,182,1,2,Mold found,2025-06-08
+848,182,1,1,Damaged,2025-07-08
+849,182,1,1,Damaged,2025-09-19
+850,182,1,1,Damaged,2025-12-11
+851,182,1,1,Mold found,2026-01-23
+852,183,1,3,Over-ripened,2024-10-17
+853,183,1,2,Spoiled on arrival,2024-10-20
+854,183,1,1,Over-ripened,2025-03-22
+855,183,1,2,Over-ripened,2025-04-11
+856,183,1,1,Over-ripened,2025-04-14
+857,183,1,3,Damaged,2025-04-28
+858,183,1,2,Damaged,2025-05-03
+859,183,1,3,Over-ripened,2025-05-15
+860,183,1,1,Over-ripened,2025-05-11
+861,183,1,1,Damaged,2025-05-18
+862,183,1,3,Damaged,2025-05-23
+863,183,1,1,Damaged,2025-07-23
+864,183,1,3,Spoiled on arrival,2025-07-27
+865,183,1,2,Damaged,2025-08-22
+866,183,1,2,Damaged,2025-10-08
+867,183,1,3,Damaged,2025-10-17
+868,183,1,3,Over-ripened,2025-11-14
+869,183,1,3,Damaged,2025-11-29
+870,183,1,2,Spoiled on arrival,2025-11-27
+871,183,1,3,Damaged,2026-01-04
+872,183,1,2,Damaged,2026-01-11
+873,183,1,1,Spoiled on arrival,2026-01-27
+874,184,1,1,Spoiled on arrival,2024-09-14
+875,184,1,1,Over-ripened,2024-11-01
+876,184,1,3,Spoiled on arrival,2024-12-09
+877,184,1,1,Spoiled on arrival,2024-12-11
+878,184,1,1,Over-ripened,2025-01-10
+879,184,1,2,Damaged,2025-04-30
+880,184,1,1,Over-ripened,2025-07-12
+881,184,1,2,Spoiled on arrival,2025-07-11
+882,184,1,2,Over-ripened,2025-07-21
+883,184,1,1,Damaged,2025-07-27
+884,184,1,1,Spoiled on arrival,2025-08-02
+885,184,1,1,Damaged,2025-08-01
+886,184,1,1,Spoiled on arrival,2025-09-21
+887,184,1,2,Damaged,2025-09-29
+888,184,1,3,Spoiled on arrival,2025-10-18
+889,184,1,1,Damaged,2025-11-19
+890,184,1,1,Damaged,2025-11-28
+891,184,1,2,Damaged,2026-01-16
+892,184,1,2,Over-ripened,2026-02-10
+893,184,1,2,Over-ripened,2026-02-16
+894,185,1,1,Over-ripened,2024-09-20
+895,185,1,1,Over-ripened,2024-11-13
+896,185,1,1,Damaged,2024-12-24
+897,185,1,1,Over-ripened,2024-12-28
+898,185,1,2,Spoiled on arrival,2025-02-20
+899,185,1,1,Over-ripened,2025-02-26
+900,185,1,2,Damaged,2025-02-28
+901,185,1,1,Spoiled on arrival,2025-03-28
+902,185,1,1,Over-ripened,2025-06-02
+903,185,1,2,Over-ripened,2025-06-02
+904,185,1,1,Spoiled on arrival,2025-06-14
+905,185,1,2,Spoiled on arrival,2025-07-14
+906,185,1,2,Damaged,2025-10-06
+907,185,1,3,Damaged,2025-10-11
+908,185,1,1,Over-ripened,2025-11-28
+909,185,1,2,Damaged,2025-12-27
+910,185,1,2,Damaged,2026-01-04
+911,186,1,1,Spoiled on arrival,2024-09-11
+912,186,1,1,Spoiled on arrival,2024-09-30
+913,186,1,1,Spoiled on arrival,2024-10-25
+914,186,1,1,Over-ripened,2024-11-18
+915,186,1,1,Damaged,2024-11-30
+916,186,1,1,Spoiled on arrival,2025-01-12
+917,186,1,1,Spoiled on arrival,2025-01-25
+918,186,1,1,Over-ripened,2025-04-02
+919,186,1,1,Over-ripened,2025-04-30
+920,186,1,1,Spoiled on arrival,2025-05-17
+921,186,1,1,Over-ripened,2025-06-14
+922,186,1,1,Damaged,2025-07-17
+923,186,1,1,Damaged,2025-08-21
+924,186,1,1,Spoiled on arrival,2025-09-20
+925,186,1,1,Damaged,2025-10-06
+926,186,1,1,Over-ripened,2025-10-05
+927,186,1,2,Damaged,2025-10-07
+928,186,1,2,Spoiled on arrival,2025-11-07
+929,186,1,1,Over-ripened,2026-02-28
+930,187,1,1,Spoiled on arrival,2024-09-19
+931,187,1,3,Damaged,2024-09-21
+932,187,1,3,Spoiled on arrival,2024-10-27
+933,187,1,3,Damaged,2024-12-30
+934,187,1,2,Over-ripened,2025-03-06
+935,187,1,1,Spoiled on arrival,2025-03-20
+936,187,1,2,Damaged,2025-03-24
+937,187,1,3,Over-ripened,2025-04-05
+938,187,1,2,Spoiled on arrival,2025-11-15
+939,187,1,1,Damaged,2025-12-27
+940,187,1,2,Damaged,2025-12-18
+941,187,1,3,Spoiled on arrival,2026-01-06
+942,187,1,2,Damaged,2026-01-26
+943,187,1,2,Spoiled on arrival,2026-02-05
+944,187,1,2,Over-ripened,2026-02-25
+945,188,1,2,Over-ripened,2024-09-20
+946,188,1,2,Spoiled on arrival,2024-10-02
+947,188,1,1,Damaged,2024-11-14
+948,188,1,2,Damaged,2024-12-23
+949,188,1,2,Damaged,2025-02-12
+950,188,1,2,Spoiled on arrival,2025-03-01
+951,188,1,2,Spoiled on arrival,2025-04-04
+952,188,1,2,Damaged,2025-05-19
+953,188,1,2,Over-ripened,2025-06-03
+954,188,1,3,Spoiled on arrival,2025-06-08
+955,188,1,1,Damaged,2025-06-22
+956,188,1,1,Spoiled on arrival,2025-07-10
+957,188,1,1,Damaged,2025-07-17
+958,188,1,1,Spoiled on arrival,2025-10-03
+959,188,1,1,Damaged,2025-10-13
+960,188,1,1,Over-ripened,2025-10-20
+961,188,1,1,Over-ripened,2025-11-17
+962,188,1,1,Spoiled on arrival,2026-01-13
+963,188,1,1,Damaged,2026-01-23
+964,188,1,1,Over-ripened,2026-02-17
+965,188,1,2,Damaged,2026-02-11
+966,189,1,1,Wrong product,2024-10-18
+967,189,1,2,Defective item,2024-11-20
+968,189,1,1,Not as described,2025-01-04
+969,189,1,1,Damaged in transit,2025-01-22
+970,189,1,1,Wrong product,2025-01-30
+971,189,1,1,Defective item,2025-02-22
+972,189,1,1,Damaged in transit,2025-03-11
+973,189,1,1,Damaged in transit,2025-03-14
+974,189,1,1,Damaged in transit,2025-03-19
+975,189,1,1,Wrong product,2025-03-27
+976,189,1,1,Damaged in transit,2025-04-26
+977,189,1,1,Defective item,2025-05-02
+978,189,1,1,Wrong product,2025-05-05
+979,189,1,1,Damaged in transit,2025-05-21
+980,189,1,1,Not as described,2025-05-29
+981,189,1,1,Defective item,2025-05-27
+982,189,1,1,Wrong product,2025-06-02
+983,189,1,1,Damaged in transit,2025-06-05
+984,189,1,1,Damaged in transit,2025-06-16
+985,189,1,1,Wrong product,2025-06-29
+986,189,1,1,Not as described,2025-07-06
+987,189,1,1,Not as described,2025-07-29
+988,189,1,1,Defective item,2025-08-12
+989,189,1,1,Damaged in transit,2025-08-29
+990,189,1,1,Not as described,2025-09-05
+991,189,1,1,Damaged in transit,2025-09-13
+992,189,1,1,Damaged in transit,2025-10-24
+993,189,1,3,Wrong product,2025-11-03
+994,189,1,2,Defective item,2025-11-25
+995,189,1,1,Not as described,2025-12-08
+996,189,1,1,Damaged in transit,2026-01-01
+997,189,1,1,Not as described,2026-01-09
+998,189,1,1,Not as described,2026-01-13
+999,189,1,1,Defective item,2026-01-24
+1000,190,1,1,Defective item,2024-09-27
+1001,190,1,2,Not as described,2024-10-04
+1002,190,1,1,Damaged in transit,2024-10-07
+1003,190,1,2,Not as described,2024-10-18
+1004,190,1,3,Damaged in transit,2024-11-05
+1005,190,1,1,Defective item,2024-11-06
+1006,190,1,1,Not as described,2024-11-06
+1007,190,1,2,Not as described,2024-11-25
+1008,190,1,1,Defective item,2025-02-01
+1009,190,1,1,Defective item,2025-02-02
+1010,190,1,1,Wrong product,2025-02-18
+1011,190,1,2,Wrong product,2025-03-01
+1012,190,1,1,Damaged in transit,2025-04-06
+1013,190,1,1,Wrong product,2025-05-01
+1014,190,1,1,Wrong product,2025-05-25
+1015,190,1,1,Wrong product,2025-06-04
+1016,190,1,1,Wrong product,2025-06-17
+1017,190,1,1,Defective item,2025-06-25
+1018,190,1,1,Defective item,2025-07-04
+1019,190,1,1,Damaged in transit,2025-08-15
+1020,190,1,1,Damaged in transit,2025-08-15
+1021,190,1,1,Damaged in transit,2025-08-21
+1022,190,1,1,Not as described,2025-08-30
+1023,190,1,1,Damaged in transit,2025-09-10
+1024,190,1,1,Not as described,2025-10-05
+1025,190,1,3,Wrong product,2025-11-01
+1026,190,1,1,Not as described,2025-11-09
+1027,190,1,1,Wrong product,2025-11-14
+1028,190,1,2,Not as described,2025-11-26
+1029,190,1,1,Damaged in transit,2025-11-28
+1030,190,1,1,Not as described,2026-01-02
+1031,190,1,1,Damaged in transit,2026-01-25
+1032,190,1,1,Not as described,2026-02-02
+1033,190,1,1,Not as described,2026-02-06
+1034,190,1,1,Not as described,2026-02-28
+1035,191,1,1,Damaged in transit,2024-09-14
+1036,191,1,1,Damaged in transit,2024-10-10
+1037,191,1,1,Damaged in transit,2024-10-25
+1038,191,1,2,Not as described,2024-10-29
+1039,191,1,2,Wrong product,2024-11-17
+1040,191,1,1,Not as described,2024-11-25
+1041,191,1,1,Not as described,2024-12-18
+1042,191,1,1,Defective item,2024-12-25
+1043,191,1,1,Not as described,2025-01-02
+1044,191,1,2,Defective item,2025-01-14
+1045,191,1,1,Not as described,2025-01-21
+1046,191,1,1,Damaged in transit,2025-02-18
+1047,191,1,1,Wrong product,2025-02-27
+1048,191,1,1,Not as described,2025-04-27
+1049,191,1,1,Defective item,2025-05-07
+1050,191,1,1,Defective item,2025-05-18
+1051,191,1,1,Damaged in transit,2025-05-19
+1052,191,1,1,Damaged in transit,2025-05-25
+1053,191,1,1,Damaged in transit,2025-05-31
+1054,191,1,1,Wrong product,2025-06-25
+1055,191,1,1,Wrong product,2025-07-03
+1056,191,1,1,Damaged in transit,2025-07-14
+1057,191,1,1,Defective item,2025-07-22
+1058,191,1,1,Damaged in transit,2025-08-21
+1059,191,1,1,Wrong product,2025-08-21
+1060,191,1,2,Defective item,2025-08-20
+1061,191,1,1,Not as described,2025-09-25
+1062,191,1,1,Not as described,2025-10-05
+1063,191,1,1,Not as described,2025-10-22
+1064,191,1,2,Defective item,2025-10-24
+1065,191,1,3,Not as described,2025-10-29
+1066,191,1,3,Damaged in transit,2025-10-30
+1067,191,1,1,Wrong product,2025-11-10
+1068,191,1,2,Damaged in transit,2025-11-13
+1069,191,1,2,Wrong product,2025-12-12
+1070,191,1,1,Defective item,2025-12-10
+1071,191,1,1,Not as described,2025-12-10
+1072,191,1,1,Not as described,2026-01-30
+1073,191,1,1,Damaged in transit,2026-01-29
+1074,191,1,2,Defective item,2026-02-06
+1075,191,1,1,Not as described,2026-02-28
+1076,192,1,1,Missing pieces,2024-09-16
+1077,192,1,1,Missing pieces,2024-10-08
+1078,192,1,1,Missing pieces,2024-10-18
+1079,192,1,3,Missing pieces,2024-11-11
+1080,192,1,2,Safety concern,2024-11-22
+1081,192,1,3,Wrong product,2024-12-06
+1082,192,1,2,Safety concern,2025-01-15
+1083,192,1,1,Broken part,2025-01-24
+1084,192,1,1,Missing pieces,2025-02-09
+1085,192,1,1,Wrong product,2025-04-15
+1086,192,1,1,Broken part,2025-04-18
+1087,192,1,1,Safety concern,2025-04-18
+1088,192,1,1,Broken part,2025-05-27
+1089,192,1,1,Safety concern,2025-07-13
+1090,192,1,1,Broken part,2025-07-29
+1091,192,1,1,Missing pieces,2025-08-09
+1092,192,1,1,Wrong product,2025-08-19
+1093,192,1,1,Safety concern,2025-08-21
+1094,192,1,1,Wrong product,2025-09-14
+1095,192,1,1,Wrong product,2025-09-19
+1096,192,1,1,Missing pieces,2025-09-25
+1097,192,1,1,Safety concern,2025-10-01
+1098,192,1,2,Missing pieces,2025-10-06
+1099,192,1,3,Missing pieces,2025-10-23
+1100,192,1,1,Wrong product,2025-11-09
+1101,192,1,3,Safety concern,2025-11-19
+1102,192,1,2,Broken part,2025-12-16
+1103,192,1,1,Missing pieces,2026-01-03
+1104,192,1,1,Safety concern,2026-02-05
+1105,192,1,1,Missing pieces,2026-02-21
+1106,193,1,1,Wrong product,2024-09-18
+1107,193,1,2,Broken part,2024-10-17
+1108,193,1,2,Wrong product,2024-10-27
+1109,193,1,3,Broken part,2024-11-03
+1110,193,1,1,Wrong product,2024-11-26
+1111,193,1,1,Safety concern,2024-12-31
+1112,193,1,1,Missing pieces,2025-01-28
+1113,193,1,2,Safety concern,2025-02-12
+1114,193,1,1,Wrong product,2025-03-03
+1115,193,1,2,Broken part,2025-03-28
+1116,193,1,1,Safety concern,2025-04-14
+1117,193,1,1,Safety concern,2025-05-09
+1118,193,1,1,Missing pieces,2025-06-14
+1119,193,1,2,Safety concern,2025-07-20
+1120,193,1,1,Wrong product,2025-09-14
+1121,193,1,2,Missing pieces,2025-09-10
+1122,193,1,1,Missing pieces,2025-10-04
+1123,193,1,1,Missing pieces,2025-11-12
+1124,193,1,3,Safety concern,2025-11-22
+1125,193,1,2,Broken part,2026-01-20
+1126,194,1,1,Missing pieces,2024-09-16
+1127,194,1,1,Broken part,2024-10-13
+1128,194,1,1,Missing pieces,2025-02-09
+1129,194,1,1,Broken part,2025-02-15
+1130,194,1,1,Broken part,2025-03-24
+1131,194,1,1,Safety concern,2025-03-22
+1132,194,1,2,Missing pieces,2025-04-10
+1133,194,1,1,Wrong product,2025-04-16
+1134,194,1,1,Safety concern,2025-04-13
+1135,194,1,1,Wrong product,2025-04-18
+1136,194,1,1,Missing pieces,2025-05-25
+1137,194,1,1,Missing pieces,2025-06-11
+1138,194,1,1,Missing pieces,2025-07-21
+1139,194,1,1,Broken part,2025-10-08
+1140,194,1,2,Wrong product,2025-11-18
+1141,194,1,2,Broken part,2025-12-03
+1142,194,1,1,Wrong product,2025-12-12
+1143,194,1,1,Safety concern,2025-12-21
+1144,194,1,1,Wrong product,2026-01-11
+1145,194,1,1,Missing pieces,2026-01-22
+1146,194,1,1,Broken part,2026-01-22
+1147,195,1,1,Colour mismatch,2024-09-20
+1148,195,1,1,Wrong size,2024-11-17
+1149,195,1,2,Fabric quality,2024-11-16
+1150,195,1,1,Customer changed mind,2024-11-23
+1151,195,1,1,Customer changed mind,2024-11-22
+1152,195,1,1,Wrong size,2024-12-17
+1153,195,1,1,Fabric quality,2025-01-01
+1154,195,1,1,Colour mismatch,2025-01-06
+1155,195,1,1,Colour mismatch,2025-01-07
+1156,195,1,1,Wrong size,2025-02-25
+1157,195,1,1,Colour mismatch,2025-03-09
+1158,195,1,1,Fabric quality,2025-04-04
+1159,195,1,1,Fabric quality,2025-04-14
+1160,195,1,1,Fabric quality,2025-07-04
+1161,195,1,1,Wrong size,2025-09-03
+1162,195,1,1,Fabric quality,2025-09-11
+1163,195,1,1,Fabric quality,2025-09-24
+1164,195,1,1,Colour mismatch,2025-09-30
+1165,195,1,1,Fabric quality,2025-10-12
+1166,195,1,1,Fabric quality,2025-10-22
+1167,195,1,1,Customer changed mind,2025-12-02
+1168,195,1,1,Customer changed mind,2025-11-30
+1169,195,1,1,Fabric quality,2025-11-27
+1170,195,1,2,Colour mismatch,2025-12-09
+1171,195,1,1,Fabric quality,2025-12-17
+1172,195,1,1,Customer changed mind,2026-01-26
+1173,195,1,1,Customer changed mind,2026-02-03
+1174,195,1,1,Customer changed mind,2026-01-29
+1175,196,1,1,Fabric quality,2024-09-09
+1176,196,1,1,Wrong size,2024-09-19
+1177,196,1,1,Fabric quality,2024-09-29
+1178,196,1,1,Colour mismatch,2024-10-02
+1179,196,1,1,Customer changed mind,2024-10-21
+1180,196,1,1,Wrong size,2024-11-01
+1181,196,1,1,Wrong size,2024-11-15
+1182,196,1,2,Fabric quality,2024-11-19
+1183,196,1,1,Wrong size,2024-12-08
+1184,196,1,1,Wrong size,2024-12-04
+1185,196,1,1,Fabric quality,2024-12-11
+1186,196,1,1,Colour mismatch,2024-12-14
+1187,196,1,1,Wrong size,2025-02-02
+1188,196,1,1,Wrong size,2025-02-09
+1189,196,1,1,Customer changed mind,2025-03-02
+1190,196,1,1,Customer changed mind,2025-03-06
+1191,196,1,1,Wrong size,2025-03-06
+1192,196,1,1,Wrong size,2025-03-10
+1193,196,1,1,Customer changed mind,2025-04-05
+1194,196,1,1,Wrong size,2025-04-09
+1195,196,1,1,Fabric quality,2025-05-06
+1196,196,1,1,Customer changed mind,2025-07-05
+1197,196,1,1,Customer changed mind,2025-10-02
+1198,196,1,1,Colour mismatch,2025-09-24
+1199,196,1,1,Fabric quality,2025-10-08
+1200,196,1,1,Wrong size,2025-10-09
+1201,196,1,1,Customer changed mind,2025-10-23
+1202,196,1,1,Customer changed mind,2025-11-08
+1203,196,1,1,Customer changed mind,2025-12-03
+1204,196,1,1,Customer changed mind,2025-11-29
+1205,196,1,1,Wrong size,2026-01-10
+1206,196,1,1,Fabric quality,2026-02-05
+1207,196,1,1,Fabric quality,2026-02-11
+1208,196,1,1,Fabric quality,2026-02-16
+1209,197,1,1,Wrong product,2024-09-25
+1210,197,1,1,Wrong product,2024-11-01
+1211,197,1,2,Wrong product,2024-11-16
+1212,197,1,1,Wrong product,2024-11-15
+1213,197,1,2,Festival over,2024-11-24
+1214,197,1,1,Festival over,2024-12-22
+1215,197,1,1,Damaged packaging,2025-02-14
+1216,197,1,1,Damaged packaging,2025-02-28
+1217,197,1,1,Festival over,2025-04-19
+1218,197,1,1,Wrong product,2025-05-01
+1219,197,1,1,Festival over,2025-08-15
+1220,197,1,1,Festival over,2025-08-18
+1221,197,1,1,Damaged packaging,2025-08-29
+1222,197,1,1,Wrong product,2025-09-07
+1223,197,1,1,Festival over,2025-10-21
+1224,197,1,1,Damaged packaging,2025-10-23
+1225,197,1,1,Festival over,2025-12-24
+1226,197,1,1,Wrong product,2025-12-26
+1227,197,1,1,Damaged packaging,2026-02-28
+1228,198,1,3,Damaged packaging,2025-05-23
+1229,198,1,2,Festival over,2025-05-30
+1230,198,1,3,Wrong product,2025-06-26
+1231,198,1,3,Wrong product,2025-07-07
+1232,198,1,3,Wrong product,2025-06-30
+1233,198,1,2,Damaged packaging,2025-07-13
+1234,198,1,1,Damaged packaging,2025-07-13
+1235,198,1,2,Damaged packaging,2025-09-19
+1236,198,1,2,Damaged packaging,2025-10-11
+1237,198,1,3,Festival over,2025-10-10
+1238,198,1,1,Damaged packaging,2025-11-05
+1239,198,1,2,Wrong product,2025-11-24
+1240,198,1,1,Wrong product,2025-12-09
+1241,198,1,3,Wrong product,2026-02-28
+1242,199,1,1,Festival over,2024-09-18
+1243,199,1,1,Festival over,2024-11-09
+1244,199,1,1,Wrong product,2024-11-12
+1245,199,1,1,Festival over,2024-12-30
+1246,199,1,1,Festival over,2025-02-16
+1247,199,1,1,Damaged packaging,2025-03-03
+1248,199,1,1,Wrong product,2025-03-23
+1249,199,1,1,Festival over,2025-07-12
+1250,199,1,1,Wrong product,2025-07-19
+1251,199,1,1,Damaged packaging,2025-07-27
+1252,199,1,1,Festival over,2025-10-19
+1253,199,1,1,Wrong product,2026-01-30
+1254,200,1,1,Wrong product,2024-12-25
+1255,200,1,1,Wrong product,2025-03-18
+1256,200,1,1,Damaged packaging,2025-04-27
