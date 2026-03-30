@@ -1,0 +1,201 @@
+id,name,category,brand,cost_price,base_selling_price,shelf_life_days
+1,Vim Bar 5RS,Cleaning Accessories,Vim,4,5,365
+2,Vim Bar 60g,Cleaning Accessories,Vim,4,5,365
+3,VIM BUY 4 GET 2 FREE 90GM,Cleaning Accessories,Vim,28,34,365
+4,Scotch Brite Scrub Pad,Cleaning Accessories,Scotch-Brite,30,45,
+5,Scotch Brite Dish Cloth,Cleaning Accessories,Scotch-Brite,22,35,
+6,Nescafe Sunrise 1.8gm Sachet,Beverages,Nestle,1,2,365
+7,Nescafe Sunrise 1.7gm Sachet,Beverages,Nestle,1,2,365
+8,Bru Coffee 1.2gm Sachet,Beverages,Bru,1,2,365
+9,Tata Tea Gold 500g,Beverages,Tata Tea,90,135,540
+10,Red Label Tea 250g,Beverages,Brooke Bond,55,85,540
+11,Coca-Cola 600ml,Beverages,Coca-Cola,30,45,90
+12,Pepsi 600ml,Beverages,Pepsi,28,42,90
+13,Bisleri Water 1L,Beverages,Bisleri,8,15,365
+14,Tropicana Orange 1L,Beverages,Tropicana,65,95,60
+15,DM Fortune Wheat 1kg,Groceries (Kirana),D-Mart,30,35,365
+16,Pani Glass 50pc,Groceries (Kirana),Local,22,30,
+17,Rice 1kg,Groceries (Kirana),Local,55,65,365
+18,DM Udid Mogar 1kg,Groceries (Kirana),D-Mart,110,130,365
+19,Sharbati Wheat 1kg,Groceries (Kirana),Sharbati,33,39,365
+20,DM Math Mogar 1kg,Groceries (Kirana),D-Mart,80,95,365
+21,Swastik Jada Poha 1kg,Groceries (Kirana),Swastik,55,65,365
+22,Tea Cup 50pc,Groceries (Kirana),Local,16,20,
+23,DM Udid Dal 1kg,Groceries (Kirana),D-Mart,100,120,365
+24,DM Kalimuch Rice 1kg,Groceries (Kirana),D-Mart,75,92,365
+25,DM Mung Mogar 1kg,Groceries (Kirana),D-Mart,105,125,365
+26,DM Sugar 5kg,Groceries (Kirana),D-Mart,188,225,730
+27,DM Chana Dal 1kg,Groceries (Kirana),D-Mart,68,82,365
+28,DM Shengdana 1kg,Groceries (Kirana),D-Mart,142,170,365
+29,Patarwadi Jumbo 100pc,Groceries (Kirana),Local,83,100,180
+30,DM Masoor Dal 1kg,Groceries (Kirana),D-Mart,72,87,365
+31,DM Cashew W-320 250g,Groceries (Kirana),D-Mart,208,250,180
+32,DM Basmati Rice 1kg,Groceries (Kirana),D-Mart,92,110,365
+33,DM Sugar 2kg,Groceries (Kirana),D-Mart,75,90,730
+34,Zed Black Manthan Mogra Dhoop,Groceries (Kirana),Zed Black,12,15,730
+35,DM Chavali Mogar 1kg,Groceries (Kirana),D-Mart,96,115,365
+36,DM Khobra 500g,Groceries (Kirana),D-Mart,188,225,180
+37,Tulsi Rajratna Chilli Pow 500g,Groceries (Kirana),Tulsi,142,170,365
+38,DM Mungdal 1kg,Groceries (Kirana),D-Mart,104,125,365
+39,DM Sabudana 1kg,Groceries (Kirana),D-Mart,58,70,365
+40,DM Sabudana 500g,Groceries (Kirana),D-Mart,30,37,365
+41,DM Jada Poha 1kg,Groceries (Kirana),D-Mart,50,60,365
+42,DM Khobra 1kg,Groceries (Kirana),D-Mart,375,450,180
+43,DM Jeera 100g,Groceries (Kirana),D-Mart,32,38,365
+44,DM Shoap 250g,Groceries (Kirana),D-Mart,79,95,365
+45,Aashirvaad Atta 5kg,Groceries (Kirana),Aashirvaad,160,210,365
+46,India Gate Basmati 5kg,Groceries (Kirana),India Gate,280,380,365
+47,Tata Salt 1kg,"Salt, Sugar & Jaggery",Tata,12,18,730
+48,Ankur Salt 1kg,"Salt, Sugar & Jaggery",Ankur,8,10,730
+49,DM Sugar 1kg,"Salt, Sugar & Jaggery",D-Mart,42,50,730
+50,Patanjali Desi Khand 1kg,"Salt, Sugar & Jaggery",Patanjali,55,68,365
+51,Britannia Bourbon 60g,"Biscuits, Cookies & Wafers",Britannia,8,10,120
+52,Parle Happy Happy 31.5g,"Biscuits, Cookies & Wafers",Parle,3,4,90
+53,Parle Gold 68.75g,"Biscuits, Cookies & Wafers",Parle,7,9,90
+54,Britannia Good Day 60g,"Biscuits, Cookies & Wafers",Britannia,8,10,120
+55,Britannia Jim Jam 62g,"Biscuits, Cookies & Wafers",Britannia,8,10,120
+56,Parle-G Biscuit 80g,"Biscuits, Cookies & Wafers",Parle,6,8,90
+57,Sunfeast Dark Fantasy 75g,"Biscuits, Cookies & Wafers",ITC,14,18,180
+58,Oreo Biscuit 120g,"Biscuits, Cookies & Wafers",Cadbury,16,20,180
+59,Patanjali Doodh Biscuit 80g,"Biscuits, Cookies & Wafers",Patanjali,8,10,90
+60,Hide & Seek 120g,"Biscuits, Cookies & Wafers",Parle,14,18,180
+61,Kream Biscuit Elaichi 100g,"Biscuits, Cookies & Wafers",Parle,8,10,90
+62,Lays Classic 26g,Snacks & Farsan,Lays,10,10,180
+63,Haldiram Bhujia 200g,Snacks & Farsan,Haldiram,38,50,180
+64,Kurkure Masala Munch 90g,Snacks & Farsan,Kurkure,10,10,180
+65,Comfort Fabric Conditioner 18ml,Detergents,Comfort,3,4,730
+66,Wheel Bar 180g,Detergents,Wheel,8,10,730
+67,Sargam Plus Soap 10RS,Detergents,Sargam,8,10,730
+68,Rin Bar 200g×4,Detergents,Rin,35,43,730
+69,Sargam Soap 5RS,Detergents,Sargam,4,5,730
+70,Rin Bar 130+30g Extra,Detergents,Rin,8,10,730
+71,Wheel Active 2in1 180+50g,Detergents,Wheel,8,10,730
+72,Surf Excel 1kg,Detergents,Surf Excel,155,210,730
+73,Ariel Matic 1kg,Detergents,Ariel,145,200,730
+74,Tide Plus 1kg,Detergents,Tide,120,160,730
+75,Maggi Noodles 70g,Ready To Eat & Cook,Nestle,12,15,365
+76,Maggi Noodles 560g 8pk,Ready To Eat & Cook,Nestle,72,95,365
+77,Nestle Everyday Milk 15g,Ready To Eat & Cook,Nestle,8,10,365
+78,Knorr Soup Mix 44g,Ready To Eat & Cook,Knorr,22,35,540
+79,MTR Poha Ready Mix 80g,Ready To Eat & Cook,MTR,18,25,365
+80,Yippee Noodles 70g,Ready To Eat & Cook,ITC,12,15,365
+81,DM Ponga 200g,Ready To Eat & Cook,D-Mart,18,24,180
+82,Maggi Masala 6g Sachet,Masala & Spices,Nestle,4,5,365
+83,Suruchi Pasta Masala 7g,Masala & Spices,Suruchi,4,5,365
+84,Everest Garam Masala 50g,Masala & Spices,Everest,22,38,365
+85,MDH Chhole Masala 100g,Masala & Spices,MDH,28,45,365
+86,Raj Garam Masala 500g,Masala & Spices,Raj,105,140,365
+87,Ambari Mirchi Powder 200g,Masala & Spices,Ambari,68,85,365
+88,Ambari Mirchi Powder 500g,Masala & Spices,Ambari,145,175,365
+89,Suhana Sambar Masala 50g,Masala & Spices,Suhana,18,25,365
+90,Badshah Rajwadi Masala 100g,Masala & Spices,Badshah,32,45,365
+91,Clinic Plus Shampoo 6ml,Hair Care,HUL,0,1,1095
+92,Indulekha Shampoo 6ml,Hair Care,Indulekha,1,2,1095
+93,Dove Shampoo 650ml,Hair Care,Dove,195,285,1095
+94,Head & Shoulders 340ml,Hair Care,H&S,185,265,1095
+95,Parachute Hair Oil 100ml,Hair Care,Parachute,37,44,1095
+96,Vatika Hair Oil 150ml,Hair Care,Vatika,70,95,1095
+97,KMC Groundnut Oil 1L,Edible Oil & Ghee,KMC,145,174,540
+98,Sunflower Vanaspati 1L,Edible Oil & Ghee,Vanaspati,142,170,540
+99,Fortune Sunflower Oil 800g,Edible Oil & Ghee,Fortune,140,168,540
+100,Fortune Soya Plus 840g,Edible Oil & Ghee,Fortune,120,144,540
+101,Saffola Gold Oil 1L,Edible Oil & Ghee,Saffola,110,155,540
+102,Amul Ghee 1L,Edible Oil & Ghee,Amul,380,490,90
+103,Cadbury Dairy Milk 30g,Chocolate,Cadbury,18,20,365
+104,Kit Kat 2 Finger 12g,Chocolate,Nestle,10,10,365
+105,5 Star 40g,Chocolate,Cadbury,18,20,365
+106,Dairy Milk Silk 60g,Chocolate,Cadbury,55,65,365
+107,Munch 12g,Chocolate,Nestle,5,5,365
+108,Perk 13g,Chocolate,Cadbury,7,5,365
+109,Eclairs 10pc,Chocolate,Cadbury,8,10,365
+110,Dettol Powder to Liquid 10RS,Personal Hygiene,Dettol,8,10,1095
+111,Dettol Soap 75g 4pk,Personal Care,Dettol,72,110,1095
+112,Lux Soap 100g 3pk,Personal Care,Lux,55,85,1095
+113,Lifebuoy Soap 125g,Personal Care,Lifebuoy,22,30,1095
+114,Colgate MaxFresh 300g,Oral Care,Colgate,68,98,1095
+115,Colgate Strong Teeth 200g,Oral Care,Colgate,45,65,1095
+116,Pepsodent 200g,Oral Care,Pepsodent,38,55,1095
+117,Nivea Men Face Wash 100ml,Skin Care,Nivea,95,155,1095
+118,Dettol Hand Wash 675ml,Personal Hygiene,Dettol,160,215,1095
+119,Whisper Ultra 30 Pads,Personal Hygiene,Whisper,88,140,
+120,DM Cashew W-180 250g,Dry Fruits,D-Mart,210,280,180
+121,DM Anjeer 250g,Dry Fruits,D-Mart,280,350,180
+122,DM Sada Pista 100g,Dry Fruits,D-Mart,160,240,180
+123,DM Badam 250g,Dry Fruits,D-Mart,480,600,365
+124,DM Badam 100g,Dry Fruits,D-Mart,192,240,365
+125,DM Tukda Kaju 50g,Dry Fruits,D-Mart,84,105,180
+126,Amul Cheese Cube 25gm,Frozens & Dairy,Amul,15,18,30
+127,Amul Butter 100g,Frozens & Dairy,Amul,48,58,30
+128,Mother Dairy Paneer 200g,Frozens & Dairy,Mother Dairy,65,88,5
+129,Amul Dahi 400g,Frozens & Dairy,Amul,32,48,7
+130,Epigamia Greek Yogurt 90g,Frozens & Dairy,Epigamia,28,45,14
+131,Dron Thermocol 50pcs,Paper & Disposable,Dron,33,40,
+132,Tissue Paper Box 100 pulls,Paper & Disposable,Selpak,40,55,
+133,Horlicks Junior 500g,Health Supplements,Horlicks,185,260,365
+134,Complan 500g,Health Supplements,Complan,195,275,365
+135,Protinex Powder 250g,Health Supplements,Protinex,280,380,365
+136,Lizol Floor Cleaner 1L,Household,Lizol,92,140,1095
+137,Harpic Toilet Cleaner 1L,Household,Harpic,82,125,1095
+138,Colin Glass Cleaner 500ml,Household,Colin,48,75,1095
+139,Good Knight Refill,Household,Good Knight,55,85,1095
+140,All Out Liquid 60N,Household,All Out,158,190,1095
+141,Odomos Mosquito Repellent,Household,Odomos,48,75,1095
+142,Air Freshener Odonil 75g,Air Freshener,Odonil,50,68,1095
+143,Kissan Mixed Fruit Jam 500g,Pickles & Chutney,Kissan,72,98,365
+144,Maggi Hot Sweet Sauce 1kg,Pickles & Chutney,Maggi,98,135,365
+145,Priya Mango Pickle 300g,Pickles & Chutney,Priya,55,75,365
+146,Classmate Notebook 200pg,Stationery,Classmate,38,60,
+147,Reynolds Pen 10pk,Stationery,Reynolds,28,49,
+148,Apsara Pencil 10pk,Stationery,Apsara,18,30,
+149,Fevicol MR 200g,Stationery,Fevicol,48,75,
+150,Cycle Agarbatti 50 Sticks,Pooja Samagri,Cycle,25,45,365
+151,Zed Black Dhoop,Pooja Samagri,Zed Black,10,15,365
+152,Pampers Pants M 34pc,Baby Care,Pampers,420,560,
+153,Mamypoko Pants M,Baby Care,Mamypoko,380,495,
+154,Ching's Secret Hakka Noodles 150g,Chinese Foods,Ching's,38,50,365
+155,Smith & Jones Pasta 200g,Chinese Foods,S&J,35,45,365
+156,Kelloggs Corn Flakes 475g,Breakfast & Cereals,Kelloggs,155,210,365
+157,Quaker Oats 500g,Breakfast & Cereals,Quaker,90,130,365
+158,DM Elichi 25g,Groceries (Kirana),D-Mart,110,135,365
+159,DM Turdal 1kg,Groceries (Kirana),D-Mart,95,115,365
+160,DM Mohari 500g,Groceries (Kirana),D-Mart,88,110,365
+161,DM Naylon Sabudana 500g,Groceries (Kirana),D-Mart,55,68,365
+162,DM Khaskhas 100g,Groceries (Kirana),D-Mart,200,240,365
+163,DM Laung 25g,Groceries (Kirana),D-Mart,38,48,365
+164,DM Ajwan 250g,Groceries (Kirana),D-Mart,90,115,365
+165,DM Khobra 250g,Groceries (Kirana),D-Mart,95,115,180
+166,DM Nachni 1kg,Groceries (Kirana),D-Mart,108,130,365
+167,DM Red Chana 1kg,Groceries (Kirana),D-Mart,58,70,365
+168,DM Kapuri Sugar 1kg,Groceries (Kirana),D-Mart,63,75,730
+169,DM Barik Shoap 250g,Groceries (Kirana),D-Mart,92,110,365
+170,DM Makhane 125g,Groceries (Kirana),D-Mart,117,140,180
+171,DM Dhaniya Dal 100g,Groceries (Kirana),D-Mart,42,50,365
+172,DM Jeera 250g,Groceries (Kirana),D-Mart,80,95,365
+173,Gillette Mach3 Razor,Personal Care,Gillette,95,175,
+174,Veet Hair Removal Cream 25g,Personal Care,Veet,38,55,1095
+175,Ponds Talcum Powder 100g,Personal Care,Ponds,38,55,1095
+176,Fair & Lovely Cream 25g,Skin Care,HUL,28,38,1095
+177,Vaseline Intensive Care 400ml,Skin Care,Vaseline,95,135,1095
+178,Gillette Fusion Shave Gel,Shaving Needs,Gillette,95,145,1095
+179,Dettol After Shave 50ml,Shaving Needs,Dettol,38,55,1095
+180,Amul Taaza Milk 1L,Frozens & Dairy,Amul,48,62,2
+181,Britannia Bread 400g,Bread & Bakery,Britannia,35,45,5
+182,English Oven Bread 400g,Bread & Bakery,English Oven,38,50,5
+183,Fresh Tomato 1kg,Fresh Produce,Local Farm,20,40,4
+184,Fresh Onion 1kg,Fresh Produce,Local Farm,22,38,14
+185,Fresh Potato 1kg,Fresh Produce,Local Farm,18,30,21
+186,Fresh Banana Dozen,Fresh Produce,Local Farm,28,45,5
+187,Fresh Spinach 250g,Fresh Produce,Local Farm,12,22,3
+188,Fresh Capsicum 500g,Fresh Produce,Local Farm,22,38,5
+189,Syska LED Bulb 9W,Electronics,Syska,85,149,
+190,Philips Extension Board 4m,Electronics,Philips,280,499,
+191,boAt Bassheads 100,Electronics,boAt,350,699,
+192,Lego Classic Brick Box,Toys,LEGO,650,1499,
+193,Funskool Monopoly,Toys,Funskool,350,699,
+194,Hot Wheels 5 Car Pack,Toys,Hot Wheels,280,549,
+195,Jockey Cotton T-Shirt M,Clothing,Jockey,220,450,
+196,Thermal Wear Adults Set,Clothing,Monte Carlo,380,849,
+197,Diwali Puja Thali Set,Seasonal,Local,180,399,
+198,Rangoli Color Set 12pk,Seasonal,Tikuli Art,42,80,
+199,Sunscreen Lakme SPF50 50ml,Seasonal,Lakme,145,230,1095
+200,G S Soya 15kg,Groceries (Kirana),GS,2100,2540,365

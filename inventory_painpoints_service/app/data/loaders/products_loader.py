@@ -1,31 +1,33 @@
 # app/data/loaders/products_loader.py
+#
+# Loads products.csv into a clean DataFrame.
+# Column contract (from our generator):
+#   id, name, category, brand, cost_price, base_selling_price, shelf_life_days
+#
+# Internal rename: id → product_id  (consistent FK name across all tables)
 
 import pandas as pd
 
 REQUIRED_COLUMNS = {
-    "Product_ID",
-    "Product_Name",
-    "Product_Category",
-    "Product_Cost",
-    "Product_Price"
+    "id", "name", "category", "brand",
+    "cost_price", "base_selling_price", "shelf_life_days"
 }
 
 
 def load_products(csv_path: str) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
 
-    # Basic schema validation
-    missing_cols = REQUIRED_COLUMNS - set(df.columns)
-    if missing_cols:
-        raise ValueError(f"Missing columns in products.csv: {missing_cols}")
+    missing = REQUIRED_COLUMNS - set(df.columns)
+    if missing:
+        raise ValueError(f"[products_loader] Missing columns: {missing}")
 
-    # Normalize column names (snake_case)
-    df = df.rename(columns={
-        "Product_ID": "product_id",
-        "Product_Name": "product_name",
-        "Product_Category": "category",
-        "Product_Cost": "unit_cost",
-        "Product_Price": "base_price"
-    })
+    # Rename id → product_id so all tables share the same FK name
+    df = df.rename(columns={"id": "product_id"})
+
+    # shelf_life_days is nullable (None = non-perishable)
+    df["shelf_life_days"] = pd.to_numeric(df["shelf_life_days"], errors="coerce")
+
+    df["cost_price"]          = pd.to_numeric(df["cost_price"],          errors="coerce")
+    df["base_selling_price"]  = pd.to_numeric(df["base_selling_price"],  errors="coerce")
 
     return df
