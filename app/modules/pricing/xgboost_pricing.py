@@ -1,4 +1,4 @@
-# app/modules/m6_pricing/xgboost_pricing.py
+
 #
 # Section 3.26 — Normal Pricing Path (XGBoost Regressor)
 #
@@ -22,7 +22,7 @@
 from pyexpat import features
 
 import numpy as np
-from decision_engine.app.unified_signal import UnifiedSignal
+from decision_engine.unified_signal import UnifiedSignal
 
 # ── Feature columns expected by XGBoost model ────────────────────────────────
 # These match product_analysis.csv column names

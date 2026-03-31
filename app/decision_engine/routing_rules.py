@@ -15,7 +15,7 @@
 # Build Plan Section 3.5.6 routing table implemented exactly.
 
 from typing import List
-from decision_engine.app.unified_signal import UnifiedSignal
+from decision_engine.unified_signal import UnifiedSignal
 
 
 def determine_action_types(signal: UnifiedSignal) -> List[str]:

@@ -7,7 +7,7 @@
 # set by conflict_resolver.py in the Decision Engine.
 
 import pandas as pd
-from decision_engine.app.unified_signal import UnifiedSignal
+from app.decision_engine.unified_signal import UnifiedSignal
 from logistics.forward_logistics import compute_forward_logistics
 from logistics.reverse_logistics import compute_reverse_logistics
 

@@ -12,7 +12,7 @@
 # Output:
 #   restock_quantity, projected_revenue_recovery
 
-from decision_engine.app.unified_signal import UnifiedSignal
+from app.decision_engine.unified_signal import UnifiedSignal
 
 # Restock safety factor — build plan default 1.3
 RESTOCK_SAFETY_FACTOR = 1.3

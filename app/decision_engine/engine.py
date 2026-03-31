@@ -23,11 +23,11 @@ import numpy as np
 from datetime import datetime
 from typing import Optional
 
-from decision_engine.app.unified_signal    import UnifiedSignal, build_unified_signal
-from decision_engine.app.priority_score    import compute_action_priority_score
-from decision_engine.app.routing_rules     import determine_action_types
-from decision_engine.app.conflict_resolver import resolve_conflicts
-import logistics
+from decision_engine.unified_signal    import UnifiedSignal, build_unified_signal
+from decision_engine.priority_score    import compute_action_priority_score
+from decision_engine.routing_rules     import determine_action_types
+from decision_engine.conflict_resolver import resolve_conflicts
+from app.modules.logistics import logistics
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -118,23 +118,13 @@ async def _call_m6_pricing(signal: UnifiedSignal,
     return result
 
 
-async def _call_m6_combo(signal: UnifiedSignal) -> dict:
-    """
-    M6 — Combo Offer Generator (Section 3.28)
-    FP-Growth validation + LLM combo generation.
-    Replace stub with: from app.modules.m6_combo import run; return await run(signal)
-    """
-    # STUB
-    return {
-        "module":            "M6_COMBO",
-        "recommended_value": {
-            "combo_name":        None,   # M6 fills
-            "products_included": None,   # M6 fills
-            "discount_pct":      None,   # M6 fills
-            "confidence_level":  None,   # M6 fills (HIGH/MEDIUM/LOW)
-        },
-        "projected_impact":  None,   # M6 fills
-    }
+async def _call_m6_combo(signal: UnifiedSignal,
+                          m6_combo_instance=None) -> dict:
+    """M6 — Combo Offer Generator. Calls real ComboModule.run()"""
+    if m6_combo_instance is None:
+        return {"module": "M6_COMBO", "error": "M6 combo not initialised"}
+    result = await m6_combo_instance.run(signal)
+    return result
 
 
 async def _write_monitor_record(signal: UnifiedSignal) -> dict:

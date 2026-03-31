@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
 from inventory_painpoints_service.app.services.nightly_pipeline import run_nightly_pipeline
-from decision_engine.app.engine import DecisionEngine
+from decision_engine.engine import DecisionEngine
 
 app = FastAPI(title="Predictify AI — Pain Point Detection Service")
 
