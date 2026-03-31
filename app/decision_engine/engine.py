@@ -28,6 +28,7 @@ from decision_engine.priority_score    import compute_action_priority_score
 from decision_engine.routing_rules     import determine_action_types
 from decision_engine.conflict_resolver import resolve_conflicts
 from app.modules.logistics import logistics
+from external_signal_service.main import reddit_trend as fetch_external_signal
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -36,56 +37,58 @@ from app.modules.logistics import logistics
 # Replace the stub with real HTTP call when Reddit module is connected.
 # ─────────────────────────────────────────────────────────────────────────────
 
-def fetch_external_signal(product_name: str) -> dict:
-    """
-    Fetches urgency_score and news_sentiment for a product.
+# def fetch_external_signal(product_name: str) -> dict:
+#     """
+#     Fetches urgency_score and news_sentiment for a product.
 
-    Currently stubbed — returns neutral signal.
-    When Reddit module is connected:
-        import requests
-        response = requests.post("http://localhost:8001/reddit-trend", json={
-            "product_name": product_name,
-            "days_window": 7,
-            "subreddits": ["india", "indianfood", "IndianStockMarket"]
-        })
-        signals = response.json()["external_signals"]
-        return _convert_reddit_signals(signals)
-    """
+#     Currently stubbed — returns neutral signal.
+#     When Reddit module is connected:
+#         import requests
+#         response = requests.post("http://localhost:8001/reddit-trend", json={
+#             "product_name": product_name,
+#             "days_window": 7,
+#             "subreddits": ["india", "indianfood", "IndianStockMarket"]
+#         })
+#         signals = response.json()["external_signals"]
+#         return _convert_reddit_signals(signals)
+#     """
 
-    # ── STUB ──────────────────────────────────────────────────────────────────
-    return {
-        "urgency_score":   0.0,
-        "news_sentiment":  "NEUTRAL",
-    }
+#     # ── STUB ──────────────────────────────────────────────────────────────────
+#     return {
+#         "urgency_score":   0.0,
+#         "news_sentiment":  "NEUTRAL",
+#     }
 
 
-def _convert_reddit_signals(signals: dict) -> dict:
-    """
-    Converts Reddit module output → Decision Engine format.
-    Build Plan Section 3.12 urgency formula:
-      urgency = abs(sentiment) × mention_frequency_weight × confidence
-    """
-    avg_sentiment    = signals.get("average_sentiment", 0.0)
-    mention_volume   = signals.get("mention_volume", 0)
-    confidence_score = signals.get("confidence_score", 0.0)
+# def _convert_reddit_signals(signals: dict) -> dict:
+#     """
+#     Converts Reddit module output → Decision Engine format.
+#     Build Plan Section 3.12 urgency formula:
+#       urgency = abs(sentiment) × mention_frequency_weight × confidence
+#     """
+#     avg_sentiment    = signals.get("average_sentiment", 0.0)
+#     mention_volume   = signals.get("mention_volume", 0)
+#     confidence_score = signals.get("confidence_score", 0.0)
 
-    # Sentiment direction
-    if avg_sentiment > 0.05:
-        news_sentiment = "POSITIVE"
-    elif avg_sentiment < -0.05:
-        news_sentiment = "NEGATIVE"
-    else:
-        news_sentiment = "NEUTRAL"
+#     # Sentiment direction
+#     if avg_sentiment > 0.05:
+#         news_sentiment = "POSITIVE"
+#     elif avg_sentiment < -0.05:
+#         news_sentiment = "NEGATIVE"
+#     else:
+#         news_sentiment = "NEUTRAL"
 
-    # Urgency score formula
-    mention_weight = min(mention_volume / 10, 1.0)
-    urgency_score  = abs(avg_sentiment) * mention_weight * confidence_score
-    urgency_score  = float(np.clip(urgency_score, 0.0, 1.0))
+#     # Urgency score formula
+#     mention_weight = min(mention_volume / 10, 1.0)
+#     urgency_score  = abs(avg_sentiment) * mention_weight * confidence_score
+#     urgency_score  = float(np.clip(urgency_score, 0.0, 1.0))
 
-    return {
-        "urgency_score":  urgency_score,
-        "news_sentiment": news_sentiment,
-    }
+#     return {
+#         "urgency_score":  urgency_score,
+#         "news_sentiment": news_sentiment,
+#     }
+
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
