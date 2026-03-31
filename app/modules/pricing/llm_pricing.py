@@ -1,4 +1,4 @@
-# app/modules/m6_pricing/llm_pricing.py
+
 #
 # Section 3.27 — Urgent News Pricing Path
 #
@@ -16,7 +16,7 @@
 import os
 import json
 import numpy as np
-from decision_engine.app.unified_signal import UnifiedSignal
+from app.decision_engine.unified_signal import UnifiedSignal
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 MIN_MARGIN_FACTOR = 1.02

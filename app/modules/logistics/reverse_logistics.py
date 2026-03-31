@@ -15,7 +15,7 @@
 #   - No nearby store capacity → TRANSFER score forced to 0
 
 import numpy as np
-from decision_engine.app.unified_signal import UnifiedSignal
+from app.decision_engine.unified_signal import UnifiedSignal
 
 # ── Warehouse stub constants ──────────────────────────────────────────────────
 # Stubbed until warehouse table exists in PostgreSQL

@@ -17,7 +17,7 @@
 # For non-perishables: days_to_expiry=9999 → expiry_urgency=0.0
 
 import numpy as np
-from decision_engine.app.unified_signal import UnifiedSignal
+from decision_engine.unified_signal import UnifiedSignal
 
 
 def compute_action_priority_score(signal: UnifiedSignal,
