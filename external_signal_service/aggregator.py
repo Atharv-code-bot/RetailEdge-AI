@@ -1,7 +1,7 @@
 from typing import List, Dict
 import numpy as np
 from datetime import datetime
-from schemas import ExternalSignals
+from external_signal_service.schemas import ExternalSignals
 
 class SignalAggregator:
 

@@ -8,16 +8,18 @@
 
 import pandas as pd
 from app.decision_engine.unified_signal import UnifiedSignal
-from logistics.forward_logistics import compute_forward_logistics
-from logistics.reverse_logistics import compute_reverse_logistics
+from app.modules.logistics.forward_logistics import compute_forward_logistics
+from app.modules.logistics.reverse_logistics import compute_reverse_logistics
 
 
 class LogisticsModule:
 
     def __init__(self, products_path: str):
         """
-        products_path: path to products.csv
-        Loaded once, reused for all product queries.
+        products_path: path to cleaned products.csv
+        NOTE:
+        - 'id' is already renamed to 'product_id' in cleaner
+        - So always use 'product_id' here
         """
         self.products_df = pd.read_csv(products_path)
 
@@ -44,13 +46,29 @@ class LogisticsModule:
         return result
 
     def _get_product_info(self, product_id: int) -> dict:
-        """Fetches product cost_price and base_selling_price."""
-        row = self.products_df[self.products_df["id"] == product_id]
+        """
+        Fetch product metadata safely.
+        Uses cleaned schema (product_id, name, cost_price, base_selling_price)
+        """
+
+        # ✅ Correct column after cleaning
+        col = "product_id" if "product_id" in self.products_df.columns else "id"
+
+        row = self.products_df[self.products_df[col] == product_id]
+
+        # ✅ Handle missing product
         if row.empty:
-            return {"cost_price": 0, "base_selling_price": 0, "name": f"product_{product_id}"}
+            return {
+                "name": f"product_{product_id}",
+                "cost_price": 0.0,
+                "base_selling_price": 0.0,
+            }
+
         r = row.iloc[0]
+
+        # ✅ Safe extraction
         return {
-            "name":               r["name"],
-            "cost_price":         float(r["cost_price"]),
-            "base_selling_price": float(r["base_selling_price"]),
+            "name": r.get("name", f"product_{product_id}"),
+            "cost_price": float(r.get("cost_price", 0.0)),
+            "base_selling_price": float(r.get("base_selling_price", 0.0)),
         }

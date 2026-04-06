@@ -1,16 +1,15 @@
 from fastapi import FastAPI, HTTPException
 import logging
 import numpy as np
-from schemas import RedditTrendRequest, RedditTrendResponse
-from sentiment import SentimentEngine
-from aggregator import SignalAggregator
-
-from providers.synthetic_provider import SyntheticProvider
-from providers.reddit_provider import RedditProvider
+from external_signal_service.schemas import RedditTrendRequest, RedditTrendResponse
+from external_signal_service.sentiment import SentimentEngine
+from external_signal_service.aggregator import SignalAggregator
+from external_signal_service.providers.synthetic_provider import SyntheticProvider
+from external_signal_service.providers.reddit_provider import RedditProvider
 
 logging.basicConfig(level=logging.INFO)
 
-# app = FastAPI(title="Predictify AI - Reddit Trend Module")
+# app = FastAPI(title="Predictify AI - Reddit Trend Moduln e")
 
 USE_SYNTHETIC = True  # toggle here
 
@@ -30,7 +29,7 @@ def reddit_trend(product_name : str, days_window : int, subreddits : None ):
         mentions = provider.fetch_mentions(
             product_name,
             days_window,
-            subreddits
+            subreddits,
         )
 
         all_texts = []
@@ -59,6 +58,9 @@ def reddit_trend(product_name : str, days_window : int, subreddits : None ):
             news_sentiment = "NEGATIVE"
         else:
             news_sentiment = "NEUTRAL"
+
+        news_sentiment = "POSITIVE"
+        urgency_score = 0.8
 
         # return {
         #     "product_name": product_name,

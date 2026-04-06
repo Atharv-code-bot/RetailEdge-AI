@@ -22,7 +22,7 @@
 from pyexpat import features
 
 import numpy as np
-from decision_engine.unified_signal import UnifiedSignal
+from app.decision_engine.unified_signal import UnifiedSignal
 
 # ── Feature columns expected by XGBoost model ────────────────────────────────
 # These match product_analysis.csv column names

@@ -17,6 +17,7 @@ import os
 import json
 import numpy as np
 from app.decision_engine.unified_signal import UnifiedSignal
+from app.core.config import GEMINI_API_KEY, GEMINI_MODEL_NAME, LLM_TIMEOUT
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 MIN_MARGIN_FACTOR = 1.02
@@ -111,7 +112,7 @@ class LLMPricingPath:
             "rationale":          rationale,
             "urgency_score":      signal.urgency_score,
             "news_sentiment":     signal.news_sentiment,
-            "model":              "gemini-pro",   # update to "t5-small-finetuned" when ready
+            "model":              GEMINI_MODEL_NAME,   # update to "t5-small-finetuned" when ready
         }
 
     # ── Prompt builder ────────────────────────────────────────────────────────
@@ -126,26 +127,26 @@ class LLMPricingPath:
 
         return f"""You are a retail pricing AI for a D-Mart supermarket in India.
 
-Product: {product_name}
-Category: {category}
-Current price: Rs {current_price}
-30-day sales trend: {trend}
-News urgency score: {urgency:.2f} (scale 0-1, higher = more urgent)
-News sentiment: {sentiment}
-Inventory pain points: {pain_str}
+        Product: {product_name}
+        Category: {category}
+        Current price: Rs {current_price}
+        30-day sales trend: {trend}
+        News urgency score: {urgency:.2f} (scale 0-1, higher = more urgent)
+        News sentiment: {sentiment}
+        Inventory pain points: {pain_str}
 
-Based on this external news signal, suggest a price adjustment.
-Respond ONLY in this JSON format, nothing else:
-{{
-  "recommended_price": <number>,
-  "rationale": "<one clear sentence explaining why>"
-}}
+        Based on this external news signal, suggest a price adjustment.
+        Respond ONLY in this JSON format, nothing else:
+        {{
+        "recommended_price": <number>,
+        "rationale": "<one clear sentence explaining why>"
+        }}
 
-Rules:
-- Price must be between Rs {round(current_price * 0.7, 2)} and Rs {round(current_price * 1.3, 2)}
-- If sentiment is NEGATIVE, price should decrease or stay same
-- If sentiment is POSITIVE and urgency > 0.7, price can increase moderately
-- Keep rationale under 20 words"""
+        Rules:
+        - Price must be between Rs {round(current_price * 0.7, 2)} and Rs {round(current_price * 1.3, 2)}
+        - If sentiment is NEGATIVE, price should decrease or stay same
+        - If sentiment is POSITIVE and urgency > 0.7, price can increase moderately
+        - Keep rationale under 20 words"""
 
     # ── Gemini API call ───────────────────────────────────────────────────────
 
@@ -153,25 +154,31 @@ Rules:
         """
         Calls Gemini API.
         Returns raw text response.
-
-        TO SWAP TO T5-SMALL:
-        Replace this entire method body with T5 inference code.
-        Prompt format stays the same.
         """
         try:
             import google.generativeai as genai
 
+            # If API key missing → fallback
+            if not GEMINI_API_KEY:
+                return self._rule_based_fallback_response(prompt)
+
             genai.configure(api_key=GEMINI_API_KEY)
-            model = genai.GenerativeModel("gemini-pro")
-            response = model.generate_content(prompt)
+
+            # Use model from config
+            model = genai.GenerativeModel(GEMINI_MODEL_NAME)
+
+            # Add timeout safety
+            response = model.generate_content(
+                prompt,
+                request_options={"timeout": LLM_TIMEOUT}
+            )
+
             return response.text
 
         except ImportError:
-            # google-generativeai not installed — use rule-based fallback
             return self._rule_based_fallback_response(prompt)
 
-        except Exception as e:
-            # API call failed — use rule-based fallback
+        except Exception:
             return self._rule_based_fallback_response(prompt)
 
     def _rule_based_fallback_response(self, prompt: str) -> str:
