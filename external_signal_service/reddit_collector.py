@@ -3,7 +3,7 @@ import time
 import logging
 from datetime import datetime, timedelta
 from typing import List, Dict
-from config import settings
+from external_signal_service.config import settings
 
 logger = logging.getLogger(__name__)
 

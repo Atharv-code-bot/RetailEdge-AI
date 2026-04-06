@@ -12,7 +12,7 @@
 #   4. (Destination store capacity conflicts handled at M5 level)
 
 from typing import List, Dict
-from decision_engine.unified_signal import UnifiedSignal
+from app.decision_engine.unified_signal import UnifiedSignal
 
 
 def resolve_conflicts(signal: UnifiedSignal,

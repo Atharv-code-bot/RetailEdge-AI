@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\RetailEdge AI\inventory_painpoints_service\RetailEdge_venv"
+VIRTUAL_ENV="D:\RetailEdge AI\RetailEdge_venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

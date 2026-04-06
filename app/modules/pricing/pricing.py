@@ -3,8 +3,8 @@
 import pandas as pd
 import joblib  # ✅ added
 from app.decision_engine.unified_signal import UnifiedSignal
-from pricing.xgboost_pricing import XGBoostPricingPath
-from pricing.llm_pricing     import LLMPricingPath
+from app.modules.pricing.xgboost_pricing import XGBoostPricingPath
+from app.modules.pricing.llm_pricing     import LLMPricingPath
 
 # Urgency threshold for LLM path
 LLM_URGENCY_THRESHOLD = 0.5

@@ -63,7 +63,11 @@ def assemble_features(
     # M4 placeholders — filled by detector layer after this function returns
     df["pain_points_triggered"] = None
     df["composite_risk_score"]  = None
-    df["tft_forecast_7d"]       = None   # TFT model fills this later
+    
+    # Temporary forecast proxy (7-day demand estimate)
+    # Uses avg_daily_sales adjusted by seasonality_index.
+    # This will be replaced by TFT (Temporal Fusion Transformer) model output in future.
+    df["tft_forecast_7d"] = df["avg_daily_sales"] * 7 * df["seasonality_index"]
 
     # Drop internal columns not needed downstream
     cols_to_drop = ["inventory_id", "expiry_date", "last_restocked_at"]

@@ -23,11 +23,14 @@ import numpy as np
 from datetime import datetime
 from typing import Optional
 
-from decision_engine.unified_signal    import UnifiedSignal, build_unified_signal
-from decision_engine.priority_score    import compute_action_priority_score
-from decision_engine.routing_rules     import determine_action_types
-from decision_engine.conflict_resolver import resolve_conflicts
-from app.modules.logistics import logistics
+from app.decision_engine.unified_signal    import UnifiedSignal, build_unified_signal
+from app.decision_engine.priority_score    import compute_action_priority_score
+from app.decision_engine.routing_rules     import determine_action_types
+from app.decision_engine.conflict_resolver import resolve_conflicts
+from app.modules.logistics.logistics    import LogisticsModule
+from app.modules.pricing.pricing        import PricingModule
+from app.modules.combo.combo            import ComboModule
+# from app.modules.xai.xai                import XAILayer
 from external_signal_service.main import reddit_trend as fetch_external_signal
 
 
@@ -61,34 +64,32 @@ from external_signal_service.main import reddit_trend as fetch_external_signal
 
 
 # def _convert_reddit_signals(signals: dict) -> dict:
-#     """
-#     Converts Reddit module output → Decision Engine format.
-#     Build Plan Section 3.12 urgency formula:
-#       urgency = abs(sentiment) × mention_frequency_weight × confidence
-#     """
-#     avg_sentiment    = signals.get("average_sentiment", 0.0)
-#     mention_volume   = signals.get("mention_volume", 0)
-#     confidence_score = signals.get("confidence_score", 0.0)
+    # """
+    # Converts Reddit module output → Decision Engine format.
+    # Build Plan Section 3.12 urgency formula:
+    #   urgency = abs(sentiment) × mention_frequency_weight × confidence
+    # """
+    # avg_sentiment    = signals.get("average_sentiment", 0.0)
+    # mention_volume   = signals.get("mention_volume", 0)
+    # confidence_score = signals.get("confidence_score", 0.0)
 
-#     # Sentiment direction
-#     if avg_sentiment > 0.05:
-#         news_sentiment = "POSITIVE"
-#     elif avg_sentiment < -0.05:
-#         news_sentiment = "NEGATIVE"
-#     else:
-#         news_sentiment = "NEUTRAL"
+    # # Sentiment direction
+    # if avg_sentiment > 0.05:
+    #     news_sentiment = "POSITIVE"
+    # elif avg_sentiment < -0.05:
+    #     news_sentiment = "NEGATIVE"
+    # else:
+    #     news_sentiment = "NEUTRAL"
 
-#     # Urgency score formula
-#     mention_weight = min(mention_volume / 10, 1.0)
-#     urgency_score  = abs(avg_sentiment) * mention_weight * confidence_score
-#     urgency_score  = float(np.clip(urgency_score, 0.0, 1.0))
+    # # Urgency score formula
+    # mention_weight = min(mention_volume / 10, 1.0)
+    # urgency_score  = abs(avg_sentiment) * mention_weight * confidence_score
+    # urgency_score  = float(np.clip(urgency_score, 0.0, 1.0))
 
-#     return {
-#         "urgency_score":  urgency_score,
-#         "news_sentiment": news_sentiment,
-#     }
-
-
+    # return {
+    #     "urgency_score":  urgency_score,
+    #     "news_sentiment": news_sentiment,
+    # }
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -98,16 +99,18 @@ from external_signal_service.main import reddit_trend as fetch_external_signal
 # They run in PARALLEL — none waits for another.
 # ─────────────────────────────────────────────────────────────────────────────
 
-async def _call_m5_logistics(signal: UnifiedSignal, needs_reverse: bool) -> dict:
+async def _call_m5_logistics(signal: UnifiedSignal, needs_reverse: bool,
+                              m5_instance=None) -> dict:
     """
     M5 — Logistics Intelligence (Section 3.20 - 3.24)
     Calls real LogisticsModule.run()
     """
-    if logistics is None:
+    if m5_instance is None:
         return {"module": "M5_LOGISTICS", "error": "M5 not initialised"}
-    result = await logistics.run(signal, needs_reverse=needs_reverse)
+    result = await m5_instance.run(signal, needs_reverse=needs_reverse)
     result["module"] = "M5_LOGISTICS"
     return result
+
 
 async def _call_m6_pricing(signal: UnifiedSignal,
                               m6_pricing_instance=None) -> dict:
@@ -150,6 +153,26 @@ class DecisionEngine:
     def __init__(self, product_analysis_path: str, products_path: str):
         self.product_analysis_path = product_analysis_path
         self.products_path         = products_path
+        self.m5 = LogisticsModule(products_path=products_path)
+        self.m6_pricing = PricingModule(
+            products_path = products_path,
+            xgb_model     = None,    # plug your model here
+            xgb_metrics   = None,
+        )
+        self.m6_combo = ComboModule(
+            products_path       = products_path,
+            itemsets_cache_path = os.path.join(
+                os.path.dirname(product_analysis_path),
+                "fp_growth_itemsets.json"
+            ),
+        )
+        # self.m7_xai = XAILayer(
+        #     xgb_model   = None,   # plug trained model here for SHAP
+        #     output_path = os.path.join(
+        #         os.path.dirname(product_analysis_path),
+        #         "recommendations.csv"
+        #     ),
+        # )
 
     async def run_for_product(self, product_id: int) -> dict:
         """
@@ -214,19 +237,29 @@ class DecisionEngine:
         tasks = []
         for action_type in action_types:
             if action_type == "LOGISTICS":
-                tasks.append(_call_m5_logistics(signal, resolution["needs_reverse"]))
+                tasks.append(_call_m5_logistics(signal, resolution["needs_reverse"],
+                                                 m5_instance=self.m5))
             elif action_type == "PRICING":
-                tasks.append(_call_m6_pricing(signal))
+                tasks.append(_call_m6_pricing(signal,
+                                               m6_pricing_instance=self.m6_pricing))
             elif action_type == "COMBO":
-                tasks.append(_call_m6_combo(signal))
+                tasks.append(_call_m6_combo(signal,
+                                             m6_combo_instance=self.m6_combo))
             elif action_type == "MONITOR":
                 tasks.append(_write_monitor_record(signal))
 
-        # Run all tasks concurrently — asyncio.gather fires them all at once
         module_results = await asyncio.gather(*tasks)
 
         # ── Step 8: Return results ────────────────────────────────────────────
         elapsed = (datetime.now() - start).total_seconds()
+        # ── Step 8: M7 XAI — explain and save recommendations ───────────────
+        # if module_results:
+        #     self.m7_xai.explain_and_save(
+        #         signal          = signal,
+        #         recommendations = list(module_results),
+        #         product_name    = product_name,
+        #     )
+
         return self._build_response(
             product_id     = product_id,
             product_name   = product_name,
