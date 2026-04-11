@@ -1,5 +1,3 @@
-
-#
 # Section 3.27 — Urgent News Pricing Path
 #
 # Triggered when: urgency_score > 0.5
@@ -17,7 +15,13 @@ import os
 import json
 import numpy as np
 from app.decision_engine.unified_signal import UnifiedSignal
-from app.core.config import GEMINI_API_KEY, GEMINI_MODEL_NAME, LLM_TIMEOUT
+from groq import Groq
+from app.core.config import GROQ_API_KEY, GROQ_MODEL_NAME
+import logging
+
+logger = logging.getLogger("LLM_PRICING")
+logger.setLevel(logging.INFO)
+
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 MIN_MARGIN_FACTOR = 1.02
@@ -25,8 +29,6 @@ MAX_PRICE_FACTOR  = 1.50
 PMS_PRICE_FACTOR  = 1.30
 PMS_THRESHOLD     = 0.10
 
-# Gemini API — set your key in environment variable
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 
 class LLMPricingPath:
@@ -50,6 +52,17 @@ class LLMPricingPath:
         Generates urgent news price recommendation via LLM.
         """
 
+        cost_price   = product_info.get("cost_price", 0)
+        base_price   = product_info.get("base_selling_price", 0)
+        product_name = product_info.get("name", "Unknown")
+        category     = product_info.get("category", "Unknown")
+
+        logger.info("=== M6 LLM PRICING START ===")
+        logger.info(f"Product: {product_name} | Category: {category}")
+        logger.info(f"Base Price: {base_price} | Cost Price: {cost_price}")
+        logger.info(f"Urgency: {signal.urgency_score} | Sentiment: {signal.news_sentiment}")
+        logger.info(f"Pain Points: {signal.pain_points}")
+
         cost_price  = product_info.get("cost_price",          0)
         base_price  = product_info.get("base_selling_price",  0)
         product_name= product_info.get("name",                "Unknown")
@@ -67,19 +80,31 @@ class LLMPricingPath:
             pain_points  = signal.pain_points,
         )
 
+        logger.info("Generated Prompt:")
+        logger.info(prompt)
+
         # ── Call LLM ──────────────────────────────────────────────────────────
-        llm_response = self._call_gemini(prompt)
+        llm_response = self._call_llm(prompt)
+
+        logger.info("Raw LLM Response:")
+        logger.info(llm_response)
 
         # ── Parse response ────────────────────────────────────────────────────
         recommended_price, rationale = self._parse_response(
             llm_response, base_price, cost_price
         )
 
+        logger.info(f"Parsed Price: {recommended_price}")
+        logger.info(f"Rationale: {rationale}")
+
         # ── Apply hard constraints (override LLM if needed) ───────────────────
         min_price = round(cost_price * MIN_MARGIN_FACTOR, 2)
         max_price = round(base_price * MAX_PRICE_FACTOR,  2)
         recommended_price = float(np.clip(recommended_price, min_price, max_price))
         recommended_price = round(recommended_price, 2)
+        
+        logger.info(f"Final Price after constraints: {recommended_price}")
+        logger.info(f"Min Price: {min_price} | Max Price: {max_price}")
 
         # ── Price Manipulation Score ───────────────────────────────────────────
         pms = (recommended_price - base_price * PMS_PRICE_FACTOR) / base_price
@@ -87,6 +112,8 @@ class LLMPricingPath:
         if fairness_clipped:
             recommended_price = round(base_price * PMS_PRICE_FACTOR, 2)
             rationale += f" [FAIRNESS CLIPPED: price capped at {PMS_PRICE_FACTOR}x base]"
+
+        logger.info(f"PMS Score: {pms} | Clipped: {fairness_clipped}")
 
         # ── Direction ─────────────────────────────────────────────────────────
         direction = "INCREASE" if recommended_price > base_price * 1.02 else \
@@ -100,6 +127,8 @@ class LLMPricingPath:
         demand_7d = signal.tft_forecast_7d or 0.0
         expected_revenue = round(recommended_price * demand_7d, 2)
 
+        logger.info("=== M6 LLM PRICING END ===")
+
         return {
             "path":               "LLM",
             "recommended_price":  recommended_price,
@@ -112,7 +141,7 @@ class LLMPricingPath:
             "rationale":          rationale,
             "urgency_score":      signal.urgency_score,
             "news_sentiment":     signal.news_sentiment,
-            "model":              GEMINI_MODEL_NAME,   # update to "t5-small-finetuned" when ready
+            "model":              GROQ_MODEL_NAME,   # update to "t5-small-finetuned" when ready
         }
 
     # ── Prompt builder ────────────────────────────────────────────────────────
@@ -150,42 +179,59 @@ class LLMPricingPath:
 
     # ── Gemini API call ───────────────────────────────────────────────────────
 
-    def _call_gemini(self, prompt: str) -> str:
+    def _call_llm(self, prompt: str) -> str:
         """
-        Calls Gemini API.
+        Calls LLM provider.
         Returns raw text response.
         """
+
         try:
-            import google.generativeai as genai
+            
 
             # If API key missing → fallback
-            if not GEMINI_API_KEY:
+            if not GROQ_API_KEY:
+                logger.warning("⚠️ LLM API KEY NOT FOUND → USING FALLBACK")
                 return self._rule_based_fallback_response(prompt)
 
-            genai.configure(api_key=GEMINI_API_KEY)
+            logger.info(f"Calling LLM Model: {GROQ_MODEL_NAME}")
 
-            # Use model from config
-            model = genai.GenerativeModel(GEMINI_MODEL_NAME)
+            client = Groq(api_key=GROQ_API_KEY)
 
-            # Add timeout safety
-            response = model.generate_content(
-                prompt,
-                request_options={"timeout": LLM_TIMEOUT}
+            response = client.chat.completions.create(
+                model=GROQ_MODEL_NAME,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are a retail pricing AI. Respond ONLY in valid JSON."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
             )
 
-            return response.text
+            logger.info("LLM API Response received")
+
+            return response.choices[0].message.content
 
         except ImportError:
+            logger.error("LLM library not installed → fallback")
             return self._rule_based_fallback_response(prompt)
 
-        except Exception:
+        except Exception as e:
+            logger.error(f"LLM call failed: {str(e)}")
             return self._rule_based_fallback_response(prompt)
+        
 
     def _rule_based_fallback_response(self, prompt: str) -> str:
         """
         Fallback when Gemini API is unavailable.
         Extracts context from prompt and returns rule-based JSON.
         """
+
+        logger.warning("⚠️ USING RULE-BASED FALLBACK PRICING")
+        
         # Extract urgency and sentiment from prompt
         urgency  = 0.0
         sentiment = "NEUTRAL"
@@ -228,6 +274,9 @@ class LLMPricingPath:
             reason = "Neutral sentiment — maintaining current price"
 
         recommended = round(current_price * (1 + adjustment), 2)
+
+        logger.info(f"Fallback Price Adjustment: {adjustment}")
+        logger.info(f"Fallback Recommended Price: {recommended}")
         return json.dumps({"recommended_price": recommended, "rationale": reason})
 
     # ── Response parser ───────────────────────────────────────────────────────

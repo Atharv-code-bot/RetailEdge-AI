@@ -19,18 +19,13 @@ from fastapi.responses import JSONResponse
 from inventory_painpoints_service.app.services.nightly_pipeline import run_nightly_pipeline
 from app.decision_engine.engine import DecisionEngine
 
-# ─────────────────────────────────────────────────────────────────────────────
-# PATHS
-# ─────────────────────────────────────────────────────────────────────────────
-BASE_DIR   = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                          "inventory_painpoints_service")
-DATA_DIR   = os.path.join(BASE_DIR, "datasamplesv2")
-OUTPUT_DIR = os.path.join(BASE_DIR, "pipeline_output")
-
-PRODUCT_ANALYSIS_PATH = os.path.join(OUTPUT_DIR, "product_analysis.csv")
-PRODUCTS_PATH         = os.path.join(DATA_DIR,   "products.csv")
-RECOMMENDATIONS_PATH  = os.path.join(OUTPUT_DIR, "recommendations.csv")
-
+from app.core.config import (
+    DATA_DIR,
+    OUTPUT_DIR,
+    PRODUCT_ANALYSIS_PATH,
+    PRODUCTS_PATH,
+    RECOMMENDATIONS_PATH
+)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # STARTUP — create Decision Engine ONCE, reuse for every request
