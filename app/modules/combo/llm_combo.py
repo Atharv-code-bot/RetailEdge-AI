@@ -15,8 +15,17 @@ import os
 import json
 from typing import List
 from app.decision_engine.unified_signal import UnifiedSignal
+<<<<<<< HEAD
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+=======
+from app.core.config import GROQ_API_KEY, GROQ_MODEL_NAME, LLM_TIMEOUT
+from groq import Groq
+import logging
+
+logger = logging.getLogger("LLM_COMBO")
+logger.setLevel(logging.INFO)
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
 
 def generate_llm_combo(
@@ -39,7 +48,11 @@ def generate_llm_combo(
     """
 
     prompt = _build_prompt(signal, product_name, product_category, partner_categories)
+<<<<<<< HEAD
     response = _call_gemini(prompt)
+=======
+    response = _call_llm(prompt)
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
     return _parse_response(response, product_name, partner_categories)
 
 
@@ -81,6 +94,7 @@ Rules:
 - Rationale should be practical, not marketing fluff"""
 
 
+<<<<<<< HEAD
 def _call_gemini(prompt: str) -> str:
     """
     Calls Gemini API.
@@ -95,6 +109,41 @@ def _call_gemini(prompt: str) -> str:
         model = genai.GenerativeModel("gemini-pro")
         response = model.generate_content(prompt)
         return response.text
+=======
+def _call_llm(prompt: str) -> str:
+    """
+    Calls LLM provider.
+    Falls back to rule-based response if API unavailable.
+    """
+    try:
+        
+
+        # If API key missing → fallback
+        if not GROQ_API_KEY:
+            return _rule_based_fallback(prompt)
+        
+        logger.info(f"Calling LLM Model: {GROQ_MODEL_NAME}")
+
+        client = Groq(api_key=GROQ_API_KEY)
+
+        response = client.chat.completions.create(
+            model=GROQ_MODEL_NAME,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a retail combo recommendation AI. Respond ONLY in valid JSON."
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ]
+        )
+        logger.info("LLM API Response received")
+
+
+        return response.choices[0].message.content
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
     except Exception:
         return _rule_based_fallback(prompt)

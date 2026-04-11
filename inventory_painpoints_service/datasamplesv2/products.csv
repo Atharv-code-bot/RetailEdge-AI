@@ -199,3 +199,14 @@ id,name,category,brand,cost_price,base_selling_price,shelf_life_days
 198,Rangoli Color Set 12pk,Seasonal,Tikuli Art,42,80,
 199,Sunscreen Lakme SPF50 50ml,Seasonal,Lakme,145,230,1095
 200,G S Soya 15kg,Groceries (Kirana),GS,2100,2540,365
+<<<<<<< HEAD
+=======
+201,Nescafe Sunrise Sachet,Beverages,Nestle,1,2,365
+202,Pepsi 600ml,Beverages,Pepsi,28,42,5
+203,Bread Pack,Bakery,Local,20,30,3
+204,Milk 500ml,Dairy,Amul,25,35,2
+205,Old Stock Biscuits,Snacks,Parle,10,15,180
+206,Winter Jacket,Clothing,Generic,500,900,365
+207,Normal Soap,Personal Care,Lux,20,30,365
+208,Regular Chips,Snacks,Lays,10,20,180
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247

@@ -13,9 +13,13 @@ LLM_URGENCY_THRESHOLD = 0.5
 class PricingModule:
 
     def __init__(self,
+<<<<<<< HEAD
                  products_path: str,
                  xgb_model=None,
                  xgb_metrics=None):
+=======
+                 products_path: str):
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
         """
         products_path : path to products.csv
         xgb_model     : your trained XGBoost model (optional — uses fallback if None)
@@ -24,6 +28,7 @@ class PricingModule:
 
         self.products_df = pd.read_csv(products_path)
 
+<<<<<<< HEAD
         # ✅ ONLY CHANGE: auto-load model if not passed
         if xgb_model is None:
             MODEL_PATH = r"pricing\models\predictify_xgb_model.pkl"
@@ -35,6 +40,10 @@ class PricingModule:
             model=xgb_model,
             metrics=xgb_metrics
         )
+=======
+
+        self.xgb_path = XGBoostPricingPath();
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
         self.llm_path = LLMPricingPath()
 

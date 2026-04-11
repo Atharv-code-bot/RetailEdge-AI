@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 .env
+=======
+# Virtual Environment
+RetailEdge_venv/
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247

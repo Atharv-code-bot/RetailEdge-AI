@@ -30,10 +30,19 @@ from app.decision_engine.conflict_resolver import resolve_conflicts
 from app.modules.logistics.logistics    import LogisticsModule
 from app.modules.pricing.pricing        import PricingModule
 from app.modules.combo.combo            import ComboModule
+<<<<<<< HEAD
 # from app.modules.xai.xai                import XAILayer
 from external_signal_service.main import reddit_trend as fetch_external_signal
 
 
+=======
+from app.modules.m7_xai.xai                import XAILayer
+from external_signal_service.main import reddit_trend as fetch_external_signal
+
+
+
+
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 # ─────────────────────────────────────────────────────────────────────────────
 # EXTERNAL SIGNAL ADAPTER
 # Calls Reddit module and converts output to urgency_score + news_sentiment.
@@ -155,9 +164,13 @@ class DecisionEngine:
         self.products_path         = products_path
         self.m5 = LogisticsModule(products_path=products_path)
         self.m6_pricing = PricingModule(
+<<<<<<< HEAD
             products_path = products_path,
             xgb_model     = None,    # plug your model here
             xgb_metrics   = None,
+=======
+            products_path = products_path
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
         )
         self.m6_combo = ComboModule(
             products_path       = products_path,
@@ -166,6 +179,7 @@ class DecisionEngine:
                 "fp_growth_itemsets.json"
             ),
         )
+<<<<<<< HEAD
         # self.m7_xai = XAILayer(
         #     xgb_model   = None,   # plug trained model here for SHAP
         #     output_path = os.path.join(
@@ -173,6 +187,14 @@ class DecisionEngine:
         #         "recommendations.csv"
         #     ),
         # )
+=======
+        self.m7_xai = XAILayer(
+            output_path = os.path.join(
+                os.path.dirname(product_analysis_path),
+                "recommendations.csv"
+            ),
+        )
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
     async def run_for_product(self, product_id: int) -> dict:
         """
@@ -199,7 +221,11 @@ class DecisionEngine:
             }
 
         # ── Step 2: Fetch external signal (Reddit module) ────────────────────
+<<<<<<< HEAD
         external = fetch_external_signal(product_name)
+=======
+        external = fetch_external_signal(product_name,30,None)
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
         # ── Step 3: Build UnifiedSignal ───────────────────────────────────────
         signal = build_unified_signal(
@@ -253,12 +279,21 @@ class DecisionEngine:
         # ── Step 8: Return results ────────────────────────────────────────────
         elapsed = (datetime.now() - start).total_seconds()
         # ── Step 8: M7 XAI — explain and save recommendations ───────────────
+<<<<<<< HEAD
         # if module_results:
         #     self.m7_xai.explain_and_save(
         #         signal          = signal,
         #         recommendations = list(module_results),
         #         product_name    = product_name,
         #     )
+=======
+        if module_results:
+            self.m7_xai.explain_and_save(
+                signal          = signal,
+                recommendations = list(module_results),
+                product_name    = product_name,
+            )
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
         return self._build_response(
             product_id     = product_id,
