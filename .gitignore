@@ -1,1 +1,11 @@
+# Virtual Environment
+RetailEdge_venv/
+venv/
 .env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
