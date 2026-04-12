@@ -142,6 +142,7 @@ class XAILayer:
         self._save(enriched)
 
         return enriched
+        return enriched
 
     # ── Helpers ───────────────────────────────────────────────────────────────
 

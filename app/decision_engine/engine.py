@@ -22,7 +22,8 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 from typing import Optional
-
+import json
+import numpy as np
 from app.decision_engine.unified_signal    import UnifiedSignal, build_unified_signal
 from app.decision_engine.priority_score    import compute_action_priority_score
 from app.decision_engine.routing_rules     import determine_action_types
@@ -252,14 +253,25 @@ class DecisionEngine:
         # ── Step 8: Return results ────────────────────────────────────────────
         elapsed = (datetime.now() - start).total_seconds()
         # ── Step 8: M7 XAI — explain and save recommendations ───────────────
+       
+
+                # 🔥 Merge XAI into each recommendation
         if module_results:
-            self.m7_xai.explain_and_save(
-                signal          = signal,
-                recommendations = list(module_results),
-                product_name    = product_name,
+            xai_results = self.m7_xai.explain_and_save(
+                signal=signal,
+                recommendations=list(module_results),
+                product_name=product_name,
             )
 
-        return self._build_response(
+            # Map module → xai
+            xai_map = {x["module"]: x for x in xai_results}
+
+            for rec in module_results:
+                module_name = rec.get("module")
+                if module_name in xai_map:
+                    rec["xai"] = self._clean_xai(xai_map[module_name])
+
+        response =self._build_response(
             product_id     = product_id,
             product_name   = product_name,
             signal         = signal,
@@ -268,7 +280,9 @@ class DecisionEngine:
             conflicts      = resolution,
             elapsed        = elapsed,
             skipped        = False,
+            xai_results    = xai_results
         )
+        return self._convert_numpy(response)
 
     # ── Helpers ───────────────────────────────────────────────────────────────
 
@@ -297,10 +311,45 @@ class DecisionEngine:
         shelf_life   = int(shelf_life) if shelf_life == shelf_life else 9999
 
         return row_dict, product_name, shelf_life
+    
+    def _clean_xai(self, xai):
+        
+
+        try:
+            reason = json.loads(xai.get("reason_json", "{}"))
+        except:
+            reason = {}
+
+        return {
+            "summary": xai.get("rationale"),
+            "key_factors": reason.get("trigger", {}).get("pain_points", []),
+            "confidence": "HIGH" if reason.get("evidence", {}).get("urgency_score", 0) > 0.5 else "MEDIUM"
+        }
+    
+    def _convert_numpy(self, obj):
+        
+        if isinstance(obj, dict):
+            return {k: self._convert_numpy(v) for k, v in obj.items()}
+
+        elif isinstance(obj, list):
+            return [self._convert_numpy(v) for v in obj]
+
+        elif isinstance(obj, np.integer):
+            return int(obj)
+
+        elif isinstance(obj, np.floating):
+            return float(obj)
+
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+
+        return obj
+    
+    
 
     def _build_response(self, product_id, product_name, signal,
                         action_types, module_results, conflicts,
-                        elapsed, skipped) -> dict:
+                        elapsed, skipped,xai_results=None) -> dict:
         """Builds the final API response."""
         return {
             "product_id":            product_id,
@@ -328,4 +377,5 @@ class DecisionEngine:
 
             # Module outputs (M5/M6/M7 — stubbed, real values when modules built)
             "recommendations":       list(module_results),
+           
         }
