@@ -59,8 +59,13 @@ def reddit_trend(product_name : str, days_window : int, subreddits : None ):
         else:
             news_sentiment = "NEUTRAL"
 
+<<<<<<< HEAD
+        news_sentiment = "POSITIVE"
+        urgency_score = 0.8
+=======
         news_sentiment = "NEUTRAL"
         urgency_score = 0.25
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
         # return {
         #     "product_name": product_name,

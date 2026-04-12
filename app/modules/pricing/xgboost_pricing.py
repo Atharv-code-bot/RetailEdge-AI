@@ -23,8 +23,11 @@ from pyexpat import features
 
 import numpy as np
 from app.decision_engine.unified_signal import UnifiedSignal
+<<<<<<< HEAD
+=======
 from app.core.config import PRICING_MODEL_PATH
 import joblib
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 
 # ── Feature columns expected by XGBoost model ────────────────────────────────
 # These match product_analysis.csv column names
@@ -39,7 +42,10 @@ FEATURE_COLS = [
     "avg_daily_sales",        # from product_analysis
     "expiry_risk_score",      # from product_analysis
     "return_rate_30d",        # from product_analysis
+<<<<<<< HEAD
+=======
     "category_encoded", 
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 ]
 
 # ── Price constraints (Build Plan Section 3.26) ───────────────────────────────
@@ -70,6 +76,11 @@ class XGBoostPricingPath:
         # ── Plug your existing model here ─────────────────────────────────────
         # model   : trained XGBoost model (sklearn-compatible)
         # metrics : dict with "rmse" and "r2" keys
+<<<<<<< HEAD
+        self.model   = model
+        self.metrics = metrics or {"rmse": None, "r2": None}
+
+=======
         # 🔥 Load bundle
         bundle = joblib.load(PRICING_MODEL_PATH)
 
@@ -83,6 +94,7 @@ class XGBoostPricingPath:
 
 
         
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
     def predict(self, signal: UnifiedSignal, product_info: dict) -> dict:
         """
         Predicts optimal price using XGBoost.
@@ -146,6 +158,9 @@ class XGBoostPricingPath:
 
     def _build_features(self, signal: UnifiedSignal,
                         base_price: float, category: str) -> dict:
+<<<<<<< HEAD
+        """Builds feature dict matching FEATURE_COLS."""
+=======
 
         # 🔥 Encode category using SAME encoder as training
         try:
@@ -153,19 +168,28 @@ class XGBoostPricingPath:
         except:
             category_encoded = 0  # fallback
 
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
         return {
             "current_price":        base_price,
             "rolling_sales_7d":     signal.tft_forecast_7d or 0.0,
             "rolling_sales_30d":    signal.tft_forecast_7d * (30/7) if signal.tft_forecast_7d else 0.0,
             "stock_to_sales_ratio": (signal.current_stock / signal.tft_forecast_7d
+<<<<<<< HEAD
+                                     if signal.tft_forecast_7d > 0 else 9999.0),
+            "seasonality_index":    1.0,   # from product_analysis if available
+=======
                                     if signal.tft_forecast_7d > 0 else 9999.0),
             "seasonality_index":    1.0,
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
             "sales_velocity_ratio": signal.sales_velocity,
             "avg_daily_sales":      signal.tft_forecast_7d / 7 if signal.tft_forecast_7d else 0.0,
             "expiry_risk_score":    1.0 - (signal.days_to_expiry / 365.0)
                                     if signal.days_to_expiry < 9999 else 0.0,
             "return_rate_30d":      signal.return_rate_30d,
+<<<<<<< HEAD
+=======
             "category_encoded":     category_encoded   # 🔥 ADD THIS
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
         }
 
     def _rule_based_fallback(self, signal: UnifiedSignal,

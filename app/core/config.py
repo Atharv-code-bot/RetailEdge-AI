@@ -5,6 +5,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Gemini Config ─────────────────────────────
+<<<<<<< HEAD
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_PROJECT_ID = os.getenv("GEMINI_PROJECT_ID")
+GEMINI_PROJECT_NUMBER = os.getenv("GEMINI_PROJECT_NUMBER")
+
+# Model settings
+GEMINI_MODEL_NAME = "gemini-pro"
+
+# LLM Safety
+LLM_TIMEOUT = int(os.getenv("LLM_TIMEOUT", 10))
+=======
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL_NAME = os.getenv("GROQ_MODEL_NAME", "llama-3.1-8b-instant")
 
@@ -35,3 +46,4 @@ PRICING_MODEL_PATH = os.path.join(
     "models",
     "predictify_xgb_model.pkl"
 )
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247

@@ -1,5 +1,8 @@
 pandas==2.2.2
+<<<<<<< HEAD
+=======
 xgboost
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 uvicorn
 joblib
 vaderSentiment
@@ -10,8 +13,11 @@ certifi==2026.1.4
 charset-normalizer==3.4.4
 click==8.3.1
 colorama==0.4.6
+<<<<<<< HEAD
+=======
 groq
 shap
+>>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
 fastapi==0.129.0
 h11==0.16.0
 idna==3.11
