@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-.env
-=======
 # Virtual Environment
 RetailEdge_venv/
 venv/
@@ -12,4 +9,6 @@ __pycache__/
 
 # OS files
 .DS_Store
->>>>>>> 4b7054477534506885cd5590b0a9c806aafe7247
+
+
+.app/modules/pricing/models/
